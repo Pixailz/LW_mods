@@ -1,5 +1,6 @@
 Ram:
     column: "Memory"
+    category: "Ram"
     logicCode: PixLogicUtils.Components.RamServer
     clientCode: PixLogicUtils.Client.MultiReadRamClient
     prefabGenerator: PixLogicUtils.Client.RamPrefab
@@ -7,6 +8,7 @@ Ram:
 
 DoubleReadRam:
     column: "Memory"
+    category: "Ram"
     logicCode: PixLogicUtils.Components.DoubleReadRamServer
     clientCode: PixLogicUtils.Client.MultiReadRamClient
     prefabGenerator: PixLogicUtils.Client.DoubleReadRamPrefab

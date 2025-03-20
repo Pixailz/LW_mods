@@ -103,12 +103,20 @@ namespace PixLogicUtils.Components
 			this.currentSize = dataWidth;
 			this.startData = 7;
 
-			if (isOn(Plow))
+			bool is_on_low = isOn(Plow);
+			bool is_on_high = isOn(Phigh);
+
+			if (is_on_low && is_on_high)
+			{
+				mode = 3;
+				this.currentSize = 0;
+			}
+			else if (is_on_low)
 			{
 				mode = 1;
 				this.currentSize /= 2;
 			}
-			else if (isOn(Phigh))
+			else if (is_on_high)
 			{
 				mode = 2;
 				this.currentSize /= 2;
@@ -122,24 +130,22 @@ namespace PixLogicUtils.Components
 			int value_tmp = this.value;
 
 			if (mode == 1)
-				value_tmp &= ~(1 << (dataWidth / 2));
+				value_tmp &= ~(1 << this.currentSize);
 			else if (mode == 2)
-				value_tmp >>= (dataWidth / 2);
-			byteToOutput(value_tmp, 0, dataWidth);
+				value_tmp >>= this.currentSize;
+			byteToOutput(value_tmp, 0, this.currentSize);
 		}
 
 		private byte	inputToByteMode(int mode)
 		{
-			int	retv = 0;
+			int	retv = this.value;
 
 			if (mode == 1)
-				retv = ((this.value & (~(1 << this.currentSize))) << this.currentSize) | inputToByte(start, this.currentSize);
+				retv |= inputToByte(this.startData, this.currentSize);
 			else if (mode == 2)
-			{
-				retv = (this.value & (~(1 << this.currentSize))) | (inputToByte(start, this.currentSize) << this.currentSize);
-			}
+				retv |= inputToByte(this.startData, this.currentSize) << this.currentSize;
 			else
-				retv = inputToByte(start, size);
+				retv = inputToByte(this.startData, this.currentSize);
 			return (byte)retv;
 		}
 
@@ -169,6 +175,9 @@ namespace PixLogicUtils.Components
 
 			// debugInput();
 			int mode = getMode();
+
+			if (mode == 3)
+				return ;
 
 			if (isOn(Pclk))
 			{

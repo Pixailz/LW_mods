@@ -1,11 +1,12 @@
 ComponentColumn.Memory: "Memory"
 ComponentColumn.Plexer: "Plexer"
 
-ComponentCategory.Reg: "Register"
+ComponentCategory.Ram: "Ram"
+ComponentCategory.Register: "Register"
 ComponentCategory.Multiplexer: "Multiplexer"
 
 PixLogicUtils.Ram: "RAM"
 PixLogicUtils.DoubleReadRam: "Double Read RAM"
-PixLogicUtils.Reg: "Register"
+PixLogicUtils.Register: "Register"
 
 PixLogicUtils.Decoder: "Decoder"
