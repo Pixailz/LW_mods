@@ -1,0 +1,2335 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="src/**/*.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="/home/pix/.local/share/Steam/steamapps/common/Logic World/GameData/Ecconia_*/**/*.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="0Harmony">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/GameData/Ecconia_HarmonyForLogicWorld/assemblies/client/0Harmony.dll</HintPath>
+    </Reference>
+    <Reference Include="0Harmony">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/GameData/Ecconia_HarmonyForLogicWorld/assemblies/server/0Harmony.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TLSModule">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/UnityEngine.TLSModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ImageConversionModule">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/UnityEngine.ImageConversionModule.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipeline.Universal.ShaderLibrary">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/Unity.RenderPipeline.Universal.ShaderLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AccessibilityModule">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/UnityEngine.AccessibilityModule.dll</HintPath>
+    </Reference>
+    <Reference Include="Shapes2D">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/Shapes2D.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/System.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.Universal.2D.Runtime">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/Unity.RenderPipelines.Universal.2D.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Composition">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/System.ComponentModel.Composition.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/System.Numerics.dll</HintPath>
+    </Reference>
+    <Reference Include="UIShapes">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/UIShapes.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.MultiplayerModule">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/UnityEngine.MultiplayerModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestTextureModule">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/UnityEngine.UnityWebRequestTextureModule.dll</HintPath>
+    </Reference>
+    <Reference Include="netstandard">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/netstandard.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/System.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeAnalysis.CSharp">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/Microsoft.CodeAnalysis.CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SharedInternalsModule">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/UnityEngine.SharedInternalsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestAudioModule">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/UnityEngine.UnityWebRequestAudioModule.dll</HintPath>
+    </Reference>
+    <Reference Include="LogicWorld.ClientCode">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/LogicWorld.ClientCode.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/System.Xml.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reflection.Metadata">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/System.Reflection.Metadata.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CrashReportingModule">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/UnityEngine.CrashReportingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="LogicWorld.Input">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/LogicWorld.Input.dll</HintPath>
+    </Reference>
+    <Reference Include="NaughtyAttributes.Test">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/NaughtyAttributes.Test.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AudioModule">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/UnityEngine.AudioModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VideoModule">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/UnityEngine.VideoModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AIModule">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/UnityEngine.AIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.InputModule">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/UnityEngine.InputModule.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/System.Runtime.Serialization.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.HierarchyCoreModule">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/UnityEngine.HierarchyCoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="FancyInput">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/FancyInput.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/System.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="LogicWorld.ClientWorldStuff">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/LogicWorld.ClientWorldStuff.dll</HintPath>
+    </Reference>
+    <Reference Include="LogicWorld.Building">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/LogicWorld.Building.dll</HintPath>
+    </Reference>
+    <Reference Include="JimmysUnityUtilities">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/JimmysUnityUtilities.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.NET.StringTools">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/Microsoft.NET.StringTools.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/System.Xml.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ContentLoadModule">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/UnityEngine.ContentLoadModule.dll</HintPath>
+    </Reference>
+    <Reference Include="LogicWorld.Messages">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/LogicWorld.Messages.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestAssetBundleModule">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/UnityEngine.UnityWebRequestAssetBundleModule.dll</HintPath>
+    </Reference>
+    <Reference Include="LogicWorld.Environments">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/LogicWorld.Environments.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.InputSystem">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/Unity.InputSystem.dll</HintPath>
+    </Reference>
+    <Reference Include="mscorlib">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/mscorlib.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ShaderVariantAnalyticsModule">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/UnityEngine.ShaderVariantAnalyticsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.TextMeshPro">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/Unity.TextMeshPro.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.Universal.Config.Runtime">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/Unity.RenderPipelines.Universal.Config.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="LogicWorld.Physics">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/LogicWorld.Physics.dll</HintPath>
+    </Reference>
+    <Reference Include="LogicWorld.References">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/LogicWorld.References.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTween">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/DOTween.dll</HintPath>
+    </Reference>
+    <Reference Include="LogicWorld.Online">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/LogicWorld.Online.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SubstanceModule">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/UnityEngine.SubstanceModule.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.ProBuilder.KdTree">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/Unity.ProBuilder.KdTree.dll</HintPath>
+    </Reference>
+    <Reference Include="LogicWorld.Networking">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/LogicWorld.Networking.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ParticleSystemModule">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/UnityEngine.ParticleSystemModule.dll</HintPath>
+    </Reference>
+    <Reference Include="LICC">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/LICC.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="NaughtyAttributes.Core">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/NaughtyAttributes.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="LogicWorld.Modding.Compilation">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/LogicWorld.Modding.Compilation.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VFXModule">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/UnityEngine.VFXModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.DSPGraphModule">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/UnityEngine.DSPGraphModule.dll</HintPath>
+    </Reference>
+    <Reference Include="sc.stylizedwater2.runtime">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/sc.stylizedwater2.runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.GPUDriven.Runtime">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/Unity.RenderPipelines.GPUDriven.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="LogicLocalization">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/LogicLocalization.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SpriteMaskModule">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/UnityEngine.SpriteMaskModule.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Burst">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/Unity.Burst.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/System.Transactions.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityConnectModule">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/UnityEngine.UnityConnectModule.dll</HintPath>
+    </Reference>
+    <Reference Include="LogicWorld.PartialWorlds">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/LogicWorld.PartialWorlds.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.PerformanceReportingModule">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/UnityEngine.PerformanceReportingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.Universal.Shaders">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/Unity.RenderPipelines.Universal.Shaders.dll</HintPath>
+    </Reference>
+    <Reference Include="LogicWorld.Rendering">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/LogicWorld.Rendering.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VehiclesModule">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/UnityEngine.VehiclesModule.dll</HintPath>
+    </Reference>
+    <Reference Include="JECS">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/JECS.dll</HintPath>
+    </Reference>
+    <Reference Include="KinematicCharacterController">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/KinematicCharacterController.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Physics2DModule">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/UnityEngine.Physics2DModule.dll</HintPath>
+    </Reference>
+    <Reference Include="Lidgren.Network">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/Lidgren.Network.dll</HintPath>
+    </Reference>
+    <Reference Include="LogicSettings.Core">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/LogicSettings.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="IsExternalInit.System.Runtime.CompilerServices">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/IsExternalInit.System.Runtime.CompilerServices.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.GameCenterModule">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/UnityEngine.GameCenterModule.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceModel.Internals">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/System.ServiceModel.Internals.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/System.Drawing.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ClusterRendererModule">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/UnityEngine.ClusterRendererModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIModule">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/UnityEngine.UIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityTestProtocolModule">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/UnityEngine.UnityTestProtocolModule.dll</HintPath>
+    </Reference>
+    <Reference Include="LogicWorld.CameraCode">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/LogicWorld.CameraCode.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.LocalizationModule">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/UnityEngine.LocalizationModule.dll</HintPath>
+    </Reference>
+    <Reference Include="LogicInitializable">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/LogicInitializable.dll</HintPath>
+    </Reference>
+    <Reference Include="LogicAPI.Client">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/LogicAPI.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Linework">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/Linework.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Buffers">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TerrainModule">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/UnityEngine.TerrainModule.dll</HintPath>
+    </Reference>
+    <Reference Include="LogicWorld.Modding">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/LogicWorld.Modding.dll</HintPath>
+    </Reference>
+    <Reference Include="LogicAPI">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/LogicAPI.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/System.Data.DataSetExtensions.dll</HintPath>
+    </Reference>
+    <Reference Include="LogicWorld.Players">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/LogicWorld.Players.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.GraphicsStateCollectionSerializerModule">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/UnityEngine.GraphicsStateCollectionSerializerModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SubsystemsModule">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/UnityEngine.SubsystemsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="LogicWorld.BuildingManagement">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/LogicWorld.BuildingManagement.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/UnityEngine.IMGUIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="LogicWorld.Interfaces">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/LogicWorld.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/System.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Compression">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/System.IO.Compression.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ClothModule">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/UnityEngine.ClothModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.PhysicsModule">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/UnityEngine.PhysicsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="LogicWorld.Outlines">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/LogicWorld.Outlines.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AndroidJNIModule">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/UnityEngine.AndroidJNIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.AI.Navigation">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/Unity.AI.Navigation.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VRModule">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/UnityEngine.VRModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityAnalyticsCommonModule">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/UnityEngine.UnityAnalyticsCommonModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.StreamingModule">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/UnityEngine.StreamingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.HotReloadModule">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/UnityEngine.HotReloadModule.dll</HintPath>
+    </Reference>
+    <Reference Include="LogicWorld.Worlds">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/LogicWorld.Worlds.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.ProBuilder.Poly2Tri">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/Unity.ProBuilder.Poly2Tri.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TerrainPhysicsModule">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/UnityEngine.TerrainPhysicsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="FancyInput.Rendering">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/FancyInput.Rendering.dll</HintPath>
+    </Reference>
+    <Reference Include="LogicWorld.Models">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/LogicWorld.Models.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TextCoreFontEngineModule">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/UnityEngine.TextCoreFontEngineModule.dll</HintPath>
+    </Reference>
+    <Reference Include="LogicWorld">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/LogicWorld.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.Core.Runtime.Shared">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/Unity.RenderPipelines.Core.Runtime.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.GridModule">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/UnityEngine.GridModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/UnityEngine.TextRenderingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="LogicWorld.SharedCode">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/LogicWorld.SharedCode.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.WindModule">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/UnityEngine.WindModule.dll</HintPath>
+    </Reference>
+    <Reference Include="FancyPantsConsole">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/FancyPantsConsole.dll</HintPath>
+    </Reference>
+    <Reference Include="FancyPantsConsole.Interfaces">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/FancyPantsConsole.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIElementsModule">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/UnityEngine.UIElementsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ScreenCaptureModule">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/UnityEngine.ScreenCaptureModule.dll</HintPath>
+    </Reference>
+    <Reference Include="LogicWorld.Chat">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/LogicWorld.Chat.dll</HintPath>
+    </Reference>
+    <Reference Include="RtMidi.Runtime">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/RtMidi.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="LogicWorld.Graphics">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/LogicWorld.Graphics.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.GIModule">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/UnityEngine.GIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="FancyInput.Rebinding">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/FancyInput.Rebinding.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Rendering.LightTransport.Runtime">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/Unity.Rendering.LightTransport.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="MessagePack.Annotations">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/MessagePack.Annotations.dll</HintPath>
+    </Reference>
+    <Reference Include="LogicSettings.Internal">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/LogicSettings.Internal.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Postprocessing.Runtime">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/Unity.Postprocessing.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="ClassImpl">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/ClassImpl.dll</HintPath>
+    </Reference>
+    <Reference Include="GameDataAccess">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/GameDataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Compression.FileSystem">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/System.IO.Compression.FileSystem.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Collections">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/Unity.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="LogicSynth">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/LogicSynth.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AnimationModule">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/UnityEngine.AnimationModule.dll</HintPath>
+    </Reference>
+    <Reference Include="LogicWorld.Utilities">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/LogicWorld.Utilities.dll</HintPath>
+    </Reference>
+    <Reference Include="LogicLog">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/LogicLog.dll</HintPath>
+    </Reference>
+    <Reference Include="MessagePack">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/MessagePack.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/System.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.ProBuilder.Csg">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/Unity.ProBuilder.Csg.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.XRModule">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/UnityEngine.XRModule.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Security">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/Mono.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="LogicWorld.UI">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/LogicWorld.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.PropertiesModule">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/UnityEngine.PropertiesModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.JSONSerializeModule">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/UnityEngine.JSONSerializeModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VirtualTexturingModule">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/UnityEngine.VirtualTexturingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="Minis">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/Minis.dll</HintPath>
+    </Reference>
+    <Reference Include="System.EnterpriseServices">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/System.EnterpriseServices.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.ProGrids">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/Unity.ProGrids.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestWWWModule">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/UnityEngine.UnityWebRequestWWWModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.DirectorModule">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/UnityEngine.DirectorModule.dll</HintPath>
+    </Reference>
+    <Reference Include="LogicWorld.CheatCodes">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/LogicWorld.CheatCodes.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TilemapModule">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/UnityEngine.TilemapModule.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.Universal.Runtime">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TextCoreTextEngineModule">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/UnityEngine.TextCoreTextEngineModule.dll</HintPath>
+    </Reference>
+    <Reference Include="LogicWorld.GameStates">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/LogicWorld.GameStates.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.MarshallingModule">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/UnityEngine.MarshallingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ClusterInputModule">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/UnityEngine.ClusterInputModule.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.ProBuilder.Stl">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/Unity.ProBuilder.Stl.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Mathematics">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/Unity.Mathematics.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SpriteShapeModule">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/UnityEngine.SpriteShapeModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UmbraModule">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/UnityEngine.UmbraModule.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/System.dll</HintPath>
+    </Reference>
+    <Reference Include="Simple360Render">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/Simple360Render.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.ProBuilder">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/Unity.ProBuilder.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.Core.Runtime">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/Unity.RenderPipelines.Core.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections.Immutable">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/System.Collections.Immutable.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.InputForUIModule">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/UnityEngine.InputForUIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityAnalyticsModule">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/UnityEngine.UnityAnalyticsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityCurlModule">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/UnityEngine.UnityCurlModule.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Burst.Unsafe">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/Unity.Burst.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encoding.CodePages">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/System.Text.Encoding.CodePages.dll</HintPath>
+    </Reference>
+    <Reference Include="LogicWorld.Audio">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/LogicWorld.Audio.dll</HintPath>
+    </Reference>
+    <Reference Include="LogicWorld.Modding.Assets">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/LogicWorld.Modding.Assets.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AssetBundleModule">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/UnityEngine.AssetBundleModule.dll</HintPath>
+    </Reference>
+    <Reference Include="OBJImport">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/OBJImport.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.InputSystem.ForUI">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/Unity.InputSystem.ForUI.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTween.Modules">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/DOTween.Modules.dll</HintPath>
+    </Reference>
+    <Reference Include="LogicUI">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/LogicUI.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeAnalysis">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/Microsoft.CodeAnalysis.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Collections.LowLevel.ILSupport">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/Unity.Collections.LowLevel.ILSupport.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.InputLegacyModule">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/UnityEngine.InputLegacyModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestModule">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/UnityEngine.UnityWebRequestModule.dll</HintPath>
+    </Reference>
+    <Reference Include="Unified.Universal.Blur">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Logic_World_Data/Managed/Unified.Universal.Blur.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.Console">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/Microsoft.Extensions.Logging.Console.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Ben.Demystifier">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/Ben.Demystifier.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reflection.DispatchProxy">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Reflection.DispatchProxy.dll</HintPath>
+    </Reference>
+    <Reference Include="LICC.Console">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/LICC.Console.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Security">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Net.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Protobuf">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.TextWriterTraceListener">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Diagnostics.TextWriterTraceListener.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions.Local">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Transactions.Local.dll</HintPath>
+    </Reference>
+    <Reference Include="Websocket.Client">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/Websocket.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Primitives">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.ComponentModel.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Globalization.Calendars">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Globalization.Calendars.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Numerics.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Globalization.Extensions">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Globalization.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization.Json">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Runtime.Serialization.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="netstandard">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/netstandard.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Pipes">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.IO.Pipes.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.MemoryMappedFiles">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.IO.MemoryMappedFiles.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeAnalysis.CSharp">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/Microsoft.CodeAnalysis.CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.UnmanagedMemoryStream">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.IO.UnmanagedMemoryStream.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Formats.Asn1">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Formats.Asn1.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/Microsoft.Extensions.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.EventBasedAsync">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.ComponentModel.EventBasedAsync.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Xml.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reflection.Metadata">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Reflection.Metadata.dll</HintPath>
+    </Reference>
+    <Reference Include="Server">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.Json">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/Microsoft.Extensions.Configuration.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeAnalysis.resources">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/de/Microsoft.CodeAnalysis.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeAnalysis.CSharp.resources">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/de/Microsoft.CodeAnalysis.CSharp.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.HttpListener">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Net.HttpListener.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeAnalysis.resources">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/tr/Microsoft.CodeAnalysis.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeAnalysis.CSharp.resources">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/tr/Microsoft.CodeAnalysis.CSharp.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/Microsoft.CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections.Concurrent">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Collections.Concurrent.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ObjectModel">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.ObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.Abstractions">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/Microsoft.Extensions.Configuration.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Options">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/Microsoft.Extensions.Options.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Hosting">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/Microsoft.Extensions.Hosting.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeAnalysis.resources">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/ja/Microsoft.CodeAnalysis.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeAnalysis.CSharp.resources">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/ja/Microsoft.CodeAnalysis.CSharp.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Private.Uri">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Private.Uri.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.FileVersionInfo">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Diagnostics.FileVersionInfo.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.VisualC">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Runtime.CompilerServices.VisualC.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Runtime.Serialization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Principal">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Security.Principal.dll</HintPath>
+    </Reference>
+    <Reference Include="JimmysUnityUtilities">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/JimmysUnityUtilities.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.EventLog">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Diagnostics.EventLog.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.SecureString">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Security.SecureString.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Principal.Windows">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Security.Principal.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Security.Cryptography.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.NET.StringTools">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/Microsoft.NET.StringTools.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Compression.ZipFile">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.IO.Compression.ZipFile.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Xml.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeAnalysis.resources">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/pt-BR/Microsoft.CodeAnalysis.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeAnalysis.CSharp.resources">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/pt-BR/Microsoft.CodeAnalysis.CSharp.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Console">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Console.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.Common">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Data.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Annotations">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.ComponentModel.Annotations.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Linq.Expressions">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Linq.Expressions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceProcess">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.ServiceProcess.dll</HintPath>
+    </Reference>
+    <Reference Include="mscorlib">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/mscorlib.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Csp">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Security.Cryptography.Csp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.SignalR.Client.Core">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/Microsoft.AspNetCore.SignalR.Client.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.WebClient">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Net.WebClient.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reflection.Emit.ILGeneration">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Reflection.Emit.ILGeneration.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Resources.Writer">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Resources.Writer.dll</HintPath>
+    </Reference>
+    <Reference Include="TypeFinder">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/TypeFinder.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Primitives">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Security.Cryptography.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.OpenSsl">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Security.Cryptography.OpenSsl.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.FileProviders.Physical">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/Microsoft.Extensions.FileProviders.Physical.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Http.Connections.Client">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/Microsoft.AspNetCore.Http.Connections.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/Microsoft.Extensions.DependencyInjection.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Win32.Registry">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/Microsoft.Win32.Registry.dll</HintPath>
+    </Reference>
+    <Reference Include="LICC">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/LICC.dll</HintPath>
+    </Reference>
+    <Reference Include="CommandLine">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/CommandLine.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Globalization">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Globalization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Linq">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Compression.Brotli">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.IO.Compression.Brotli.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeAnalysis.resources">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/ru/Microsoft.CodeAnalysis.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeAnalysis.CSharp.resources">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/ru/Microsoft.CodeAnalysis.CSharp.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.FileExtensions">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/Microsoft.Extensions.Configuration.FileExtensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.RegularExpressions">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Text.RegularExpressions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.Debug">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Diagnostics.Debug.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeAnalysis.resources">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/fr/Microsoft.CodeAnalysis.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeAnalysis.CSharp.resources">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/fr/Microsoft.CodeAnalysis.CSharp.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.ReaderWriter">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Xml.ReaderWriter.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Formats.Tar">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Formats.Tar.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.SignalR.Protocols.Json">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/Microsoft.AspNetCore.SignalR.Protocols.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reflection">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Reflection.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reflection.Emit">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Reflection.Emit.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Extensions">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Runtime.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Private.Xml.Linq">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Private.Xml.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.UserSecrets">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/Microsoft.Extensions.Configuration.UserSecrets.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reflection.TypeExtensions">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Reflection.TypeExtensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Transactions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Connections.Abstractions">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/Microsoft.AspNetCore.Connections.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceModel.Web">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.ServiceModel.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.XPath">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Xml.XPath.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Threading.Tasks.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics.Vectors">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.FileSystem">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.IO.FileSystem.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Overlapped">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Threading.Overlapped.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.IO.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.NetworkInformation">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Net.NetworkInformation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/Microsoft.VisualBasic.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Algorithms">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Security.Cryptography.Algorithms.dll</HintPath>
+    </Reference>
+    <Reference Include="JECS">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/JECS.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Sockets">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Net.Sockets.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.TypeConverter">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.ComponentModel.TypeConverter.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Pipelines">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.IO.Pipelines.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.XmlSerializer">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Xml.XmlSerializer.dll</HintPath>
+    </Reference>
+    <Reference Include="Lidgren.Network">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/Lidgren.Network.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Timer">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Threading.Timer.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.WebProxy">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Net.WebProxy.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Ping">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Net.Ping.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.FileProviders.Abstractions">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/Microsoft.Extensions.FileProviders.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization.Formatters">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Runtime.Serialization.Formatters.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.Process">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Diagnostics.Process.dll</HintPath>
+    </Reference>
+    <Reference Include="JetBrains.Annotations">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/JetBrains.Annotations.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Drawing.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Dynamic.Runtime">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Dynamic.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Json">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Net.Http.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.DiagnosticSource">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.IsolatedStorage">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.IO.IsolatedStorage.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.WebSockets.Client">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Net.WebSockets.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Buffers">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="LogicScript">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/LogicScript.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.Contracts">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Diagnostics.Contracts.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Mail">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Net.Mail.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Requests">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Net.Requests.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeAnalysis.resources">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/zh-Hant/Microsoft.CodeAnalysis.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeAnalysis.CSharp.resources">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/zh-Hant/Microsoft.CodeAnalysis.CSharp.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="LogicAPI">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/LogicAPI.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Handles">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Runtime.Handles.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Data.DataSetExtensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.SignalR.Common">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/Microsoft.AspNetCore.SignalR.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.CommandLine">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/Microsoft.Extensions.Configuration.CommandLine.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.WebHeaderCollection">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Net.WebHeaderCollection.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encoding">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Text.Encoding.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.ServicePoint">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Net.ServicePoint.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="LightInject">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/LightInject.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Compression">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.IO.Compression.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeAnalysis.resources">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/cs/Microsoft.CodeAnalysis.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeAnalysis.CSharp.resources">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/cs/Microsoft.CodeAnalysis.CSharp.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Pipes.AccessControl">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.IO.Pipes.AccessControl.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections.Specialized">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Collections.Specialized.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Dataflow">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Threading.Tasks.Dataflow.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.FileSystemGlobbing">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/Microsoft.Extensions.FileSystemGlobbing.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.FileSystem.Primitives">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.IO.FileSystem.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.ComponentModel.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Encoding">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Security.Cryptography.Encoding.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.StackTrace">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Diagnostics.StackTrace.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Hosting.Abstractions">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/Microsoft.Extensions.Hosting.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Options.ConfigurationExtensions">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/Microsoft.Extensions.Options.ConfigurationExtensions.dll</HintPath>
+    </Reference>
+    <Reference Include="TrueColorConsole">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/TrueColorConsole.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.EventSource">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/Microsoft.Extensions.Logging.EventSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization.Primitives">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Runtime.Serialization.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/Microsoft.Extensions.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="LogicWorld.SharedCode">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/LogicWorld.SharedCode.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Claims">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Security.Claims.dll</HintPath>
+    </Reference>
+    <Reference Include="LightInject.Microsoft.DependencyInjection">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/LightInject.Microsoft.DependencyInjection.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encodings.Web">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Private.DataContractSerialization">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Private.DataContractSerialization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Win32.Primitives">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/Microsoft.Win32.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Resources.ResourceManager">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Resources.ResourceManager.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Private.Xml">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Private.Xml.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.Tracing">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Diagnostics.Tracing.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reflection.Extensions">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Reflection.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="MessagePack.Annotations">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/MessagePack.Annotations.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.FileSystem.Watcher">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.IO.FileSystem.Watcher.dll</HintPath>
+    </Reference>
+    <Reference Include="ClassImpl">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/ClassImpl.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Intrinsics">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Runtime.Intrinsics.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Compression.FileSystem">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.IO.Compression.FileSystem.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Runtime.InteropServices.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing.Primitives">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Drawing.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Numerics">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Runtime.Numerics.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Resources.Reader">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Resources.Reader.dll</HintPath>
+    </Reference>
+    <Reference Include="LogicLog">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/LogicLog.dll</HintPath>
+    </Reference>
+    <Reference Include="MessagePack">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/MessagePack.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reflection.Emit.Lightweight">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Reflection.Emit.Lightweight.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encoding.Extensions">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Text.Encoding.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.AccessControl">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Security.AccessControl.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.ThreadPool">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Threading.ThreadPool.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Loader">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Runtime.Loader.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.XDocument">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Xml.XDocument.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Primitives">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Net.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.ComponentModel.DataAnnotations.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reflection.Primitives">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Reflection.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr4.Runtime.Standard">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/Antlr4.Runtime.Standard.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Http.Connections.Common">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/Microsoft.AspNetCore.Http.Connections.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization.Xml">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Runtime.Serialization.Xml.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.NameResolution">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Net.NameResolution.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Private.CoreLib">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Private.CoreLib.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Threading.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.X509Certificates">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Security.Cryptography.X509Certificates.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Linq.Parallel">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Linq.Parallel.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Quic">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Net.Quic.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.Binder">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/Microsoft.Extensions.Configuration.Binder.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.SignalR.Client">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/Microsoft.AspNetCore.SignalR.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeAnalysis.resources">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/es/Microsoft.CodeAnalysis.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeAnalysis.CSharp.resources">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/es/Microsoft.CodeAnalysis.CSharp.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices.JavaScript">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Runtime.InteropServices.JavaScript.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.WebSockets">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Net.WebSockets.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.HttpUtility">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Web.HttpUtility.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Reactive.dll</HintPath>
+    </Reference>
+    <Reference Include="BouncyCastle.Crypto">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.EnvironmentVariables">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/Microsoft.Extensions.Configuration.EnvironmentVariables.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.FileSystem.DriveInfo">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.IO.FileSystem.DriveInfo.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic.Core">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/Microsoft.VisualBasic.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System.AppContext">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.AppContext.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeAnalysis.resources">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/pl/Microsoft.CodeAnalysis.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeAnalysis.CSharp.resources">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/pl/Microsoft.CodeAnalysis.CSharp.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections.NonGeneric">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Collections.NonGeneric.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Http.Features">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/Microsoft.AspNetCore.Http.Features.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.Tools">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Diagnostics.Tools.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections.Immutable">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Collections.Immutable.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.XPath.XDocument">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Xml.XPath.XDocument.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.EventLog">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/Microsoft.Extensions.Logging.EventLog.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Primitives">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/Microsoft.Extensions.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.XmlDocument">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Xml.XmlDocument.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.Debug">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/Microsoft.Extensions.Logging.Debug.dll</HintPath>
+    </Reference>
+    <Reference Include="LogicAPI.Server">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/LogicAPI.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Serialization">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Xml.Serialization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Parallel">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Threading.Tasks.Parallel.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encoding.CodePages">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Text.Encoding.CodePages.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.Configuration">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/Microsoft.Extensions.Logging.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeAnalysis.resources">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/ko/Microsoft.CodeAnalysis.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeAnalysis.CSharp.resources">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/ko/Microsoft.CodeAnalysis.CSharp.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.TraceSource">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Diagnostics.TraceSource.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/WindowsBase.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Cng">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Security.Cryptography.Cng.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeAnalysis.resources">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/zh-Hans/Microsoft.CodeAnalysis.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeAnalysis.CSharp.resources">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/zh-Hans/Microsoft.CodeAnalysis.CSharp.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Channels">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Threading.Channels.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Thread">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Threading.Thread.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeAnalysis.resources">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/it/Microsoft.CodeAnalysis.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeAnalysis.CSharp.resources">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/it/Microsoft.CodeAnalysis.CSharp.resources.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Linq.Queryable">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.Linq.Queryable.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeAnalysis">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/Microsoft.CodeAnalysis.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.FileSystem.AccessControl">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/System.IO.FileSystem.AccessControl.dll</HintPath>
+    </Reference>
+    <Reference Include="Dawn.Guard">
+	  <SpecificVersion>false</SpecificVersion>
+	  <Private>false</Private>
+      <HintPath>/home/pix/.local/share/Steam/steamapps/common/Logic World/Server/Dawn.Guard.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>

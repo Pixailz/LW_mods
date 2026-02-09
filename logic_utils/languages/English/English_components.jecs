@@ -1,12 +1,20 @@
 ComponentColumn.Memory: "Memory"
 ComponentColumn.Plexer: "Plexer"
+ComponentColumn.Displays: "Displays"
+ComponentColumn.Utilities: "Utilities"
 
 ComponentCategory.Ram: "Ram"
 ComponentCategory.Register: "Register"
 ComponentCategory.Multiplexer: "Multiplexer"
+ComponentCategory.SevenSegment: "Seven Segment"
+ComponentCategory.HexDisplay: "Hexadecimal"
+ComponentCategory.Screen: "Screen"
 
 PixLogicUtils.Ram: "RAM"
 PixLogicUtils.DoubleReadRam: "Double Read RAM"
 PixLogicUtils.Register: "Register"
-
 PixLogicUtils.Decoder: "Decoder"
+PixLogicUtils.SevenSegment: "Seven Segment Display"
+PixLogicUtils.HexDisplay: "Hexadecimal Display"
+PixLogicUtils.DummyTest: "Dummy Test Component"
+PixLogicUtils.Screen: "Screen Display"

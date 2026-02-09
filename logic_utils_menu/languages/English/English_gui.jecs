@@ -1,7 +1,0 @@
-PixLogicUtilsMenu.FileLoad: "Load File"
-PixLogicUtilsMenu.FileFieldHint: "Filename here..."
-PixLogicUtilsMenu.FileNotFound: "<color=\#f00>File does not exist!</color>"
-PixLogicUtilsMenu.AddressLines: "Address Lines"
-PixLogicUtilsMenu.BitWidth: "Bit Width"
-PixLogicUtilsMenu.DecoderWidth: "Decoder Width"
-PixLogicUtilsMenu.RegisterWidth: "Register Width"

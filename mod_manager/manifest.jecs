@@ -1,0 +1,9 @@
+ID: PixModManager
+Name: Pixailz Mod Manager
+Author: Pixailz
+Version: 0.0.1
+Priority: -1
+ClientOnly: True
+Dependencies:
+    - EccsGuiBuilder
+    - EccsLogicWorldAPI

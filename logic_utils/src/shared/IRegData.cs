@@ -1,17 +1,21 @@
-﻿namespace PixLogicUtils.Shared.CustomData
+﻿using PixLogicUtils.Shared.Config;
+
+namespace PixLogicUtils.Shared.CustomData
 {
     public interface IRegData
     {
-        int value { get; set; }
-        int dataWidth { get; set; }
+        t_data	Value { get; set; }
+        t_width	DataWidth { get; set; }
+		bool	LoadFromSave { get; set; }
     }
 
     public static class RegDataInit
     {
-        public static void initialize(this IRegData data)
+        public static void Initialize(this IRegData data)
         {
-            data.value = 0;
-            data.dataWidth = 1;
+            data.Value = 0;
+            data.DataWidth = CRegister.DefaultDataWidth;
+			data.LoadFromSave = true;
         }
     }
 }

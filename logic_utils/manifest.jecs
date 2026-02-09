@@ -1,5 +1,8 @@
 ID: PixLogicUtils
 Name: Pixailz Logic Utils
 Author: Pixailz
-Version: 0.0.1
+Version: 0.0.2
 Priority: 0
+ClientDependencies:
+    - EccsGuiBuilder
+    - EccsLogicWorldAPI

@@ -1,31 +1,33 @@
-Ram:
-    column: "Memory"
-    category: "Ram"
-    logicCode: PixLogicUtils.Components.RamServer
-    clientCode: PixLogicUtils.Client.MultiReadRamClient
-    prefabGenerator: PixLogicUtils.Client.RamPrefab
-    placingRulesGenerator: PixLogicUtils.Client.MultiReadRamPlacingRules
-
-DoubleReadRam:
-    column: "Memory"
-    category: "Ram"
-    logicCode: PixLogicUtils.Components.DoubleReadRamServer
-    clientCode: PixLogicUtils.Client.MultiReadRamClient
-    prefabGenerator: PixLogicUtils.Client.DoubleReadRamPrefab
-    placingRulesGenerator: PixLogicUtils.Client.MultiReadRamPlacingRules
-
-Register:
-    column: "Memory"
-    category: "Register"
-    logicCode: PixLogicUtils.Components.RegisterServer
-    clientCode: PixLogicUtils.Client.RegisterClient
-    prefabGenerator: PixLogicUtils.Client.RegisterPrefab
-    placingRulesGenerator: PixLogicUtils.Client.RegisterPlacingRules
-
 Decoder:
     column: "Plexer"
     category: "Multiplexer"
     logicCode: PixLogicUtils.Server.DecoderServer
-    clientCode: PixLogicUtils.Client.DecoderClient
     prefabGenerator: PixLogicUtils.Client.DecoderPrefab
     placingRulesGenerator: PixLogicUtils.Client.DecoderPlacingRules
+
+Register:
+    column: "Memory"
+    category: "Register"
+    logicCode: PixLogicUtils.Server.RegisterServer
+    prefabGenerator: PixLogicUtils.Client.RegisterPrefab
+    placingRulesGenerator: PixLogicUtils.Client.RegisterPlacingRules
+
+Ram:
+    column: "Memory"
+    category: "Ram"
+    logicCode: PixLogicUtils.Server.MultiReadRamServer
+    clientCode: PixLogicUtils.Client.MultiReadRamClient
+    prefabGenerator: PixLogicUtils.Client.MultiReadRamPrefab
+    placingRulesGenerator: PixLogicUtils.Client.MultiReadRamPlacingRules
+    codeInfoInts:
+        - 1 # ReadNumber
+
+DoubleReadRam:
+    column: "Memory"
+    category: "Ram"
+    logicCode: PixLogicUtils.Server.MultiReadRamServer
+    clientCode: PixLogicUtils.Client.MultiReadRamClient
+    prefabGenerator: PixLogicUtils.Client.MultiReadRamPrefab
+    placingRulesGenerator: PixLogicUtils.Client.MultiReadRamPlacingRules
+    codeInfoInts:
+        - 2 # ReadNumber

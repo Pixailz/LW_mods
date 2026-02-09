@@ -2,7 +2,7 @@
 
 namespace PixLogicUtils.Server
 {
-    class PixLogicUtilsServer : ServerMod
+    public class PixLogicUtilsServer : ServerMod
     {
         protected override void Initialize()
         {

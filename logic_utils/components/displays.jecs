@@ -1,0 +1,21 @@
+SevenSegment:
+    column: "Displays"
+    category: "SevenSegment"
+    clientCode: PixLogicUtils.Client.SevenSegmentClient
+    prefabGenerator: PixLogicUtils.Client.SevenSegmentPrefab
+    placingRulesGenerator: PixLogicUtils.Client.SevenSegmentPlacingRules
+
+HexDisplay:
+    column: "Displays"
+    category: "HexDisplay"
+    clientCode: PixLogicUtils.Client.HexDisplayClient
+    prefabGenerator: PixLogicUtils.Client.HexDisplayPrefab
+    placingRulesGenerator: PixLogicUtils.Client.HexDisplayPlacingRules
+
+Screen:
+    column: "Displays"
+    category: "Screen"
+    logicCode: PixLogicUtils.Server.ScreenServer
+    clientCode: PixLogicUtils.Client.ScreenClient
+    prefabGenerator: PixLogicUtils.Client.ScreenPrefab
+    placingRulesGenerator: PixLogicUtils.Client.ScreenPlacingRules
