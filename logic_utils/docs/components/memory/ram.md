@@ -20,7 +20,7 @@ A standard Random Access Memory component with configurable address and data wid
 - Read pin (R) for reading data
 - File loading support via menu
 
-**Location:** [`src/client/MultiReadRam/MultiReadRamClient.cs`](https://github.com/Pixailz/LW_mods/blob/main/src/client/MultiReadRam/MultiReadRamClient.cs)
+**Location:** [`src/client/MultiReadRam/MultiReadRamClient.cs`](https://github.com/Pixailz/LW_mods/blob/main/logic_utils/src/client/MultiReadRam/MultiReadRamClient.cs)
 
 ## **Configuration**
 

@@ -19,7 +19,7 @@ An enhanced RAM component that can read from two addresses simultaneously.
 - Two read pins (R1 and R2)
 - File loading support
 
-**Location:** [`src/client/MultiReadRam/MultiReadRamClient.cs`](src/client/MultiReadRam/MultiReadRamClient.cs)
+**Location:** [`src/client/MultiReadRam/MultiReadRamClient.cs`](https://github.com/Pixailz/LW_mods/blob/main/logic_utils/src/client/MultiReadRam/MultiReadRamClient.cs)
 
 ## **Configuration**
 
