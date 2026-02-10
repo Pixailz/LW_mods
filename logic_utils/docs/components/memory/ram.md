@@ -20,7 +20,7 @@ A standard Random Access Memory component with configurable address and data wid
 - Read pin (R) for reading data
 - File loading support via menu
 
-**Location:** [`src/client/MultiReadRam/MultiReadRamClient.cs`](https://github.com/Pix/logic_utils/blob/main/src/client/MultiReadRam/MultiReadRamClient.cs)
+**Location:** [`src/client/MultiReadRam/MultiReadRamClient.cs`](https://github.com/Pixailz/LW_mods/blob/main/src/client/MultiReadRam/MultiReadRamClient.cs)
 
 ## **Configuration**
 
@@ -31,7 +31,7 @@ A standard Random Access Memory component with configurable address and data wid
 
 ### in code
 
-[Config.cs](https://github.com/Pix/logic_utils/blob/main/logic_utils/src/shared/Config.cs#71)
+[Config.cs](https://github.com/Pixailz/LW_mods/blob/main/logic_utils/src/shared/Config.cs#71)
 
 - **BlockColor**: Sets the color of the RAM block. Default is `Color24.AcidGreen`.
 - **BlockDepth**: Defines the depth of the RAM block in the game. Default is `2f`.

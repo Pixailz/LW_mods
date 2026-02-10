@@ -19,7 +19,7 @@ A 5×9 pixel matrix display for showing hexadecimal digits (0-9, A-F).
 - Resizable width
 - On/Off control pin
 
-**Location:** [`src/client/HexDisplay/HexDisplayClient.cs`](https://github.com/Pix/logic_utils/blob/main/logic_utils/src/client/HexDisplay/HexDisplayClient.cs)
+**Location:** [`src/client/HexDisplay/HexDisplayClient.cs`](https://github.com/Pixailz/LW_mods/blob/main/logic_utils/src/client/HexDisplay/HexDisplayClient.cs)
 
 ## **Configuration**
 
@@ -30,7 +30,7 @@ A 5×9 pixel matrix display for showing hexadecimal digits (0-9, A-F).
 
 ### in code
 
-[Config.cs](https://github.com/Pix/logic_utils/blob/main/logic_utils/src/shared/Config.cs#L200)
+[Config.cs](https://github.com/Pixailz/LW_mods/blob/main/logic_utils/src/shared/Config.cs#L200)
 
 - **BlockColor**: Sets the base color of the display block. Default is `Color24.Black`.
 - **BlockDepth**: Depth of the display block. Default is `0.5f`.

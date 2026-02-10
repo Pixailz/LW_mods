@@ -21,7 +21,7 @@ A programmable pixel display with configurable resolution and color depth.
 - Customizable color schemes
 - Clock-driven pixel data input
 
-**Location:** [`src/client/Screen/ScreenClient.cs`](https://github.com/Pix/logic_utils/blob/main/logic_utils/src/client/Screen/ScreenClient.cs)
+**Location:** [`src/client/Screen/ScreenClient.cs`](https://github.com/Pixailz/LW_mods/blob/main/logic_utils/src/client/Screen/ScreenClient.cs)
 
 ## **Configuration**
 
@@ -34,7 +34,7 @@ A programmable pixel display with configurable resolution and color depth.
 
 ### in code
 
-[Config.cs](https://github.com/Pix/logic_utils/blob/main/logic_utils/src/shared/Config.cs#L437)
+[Config.cs](https://github.com/Pixailz/LW_mods/blob/main/logic_utils/src/shared/Config.cs#L437)
 
 - **BlockColor**: Sets the base color of the screen block. Default is `Color24.Black`.
 - **BlockDepth**: Depth of the screen block. Default is `0.5f`.

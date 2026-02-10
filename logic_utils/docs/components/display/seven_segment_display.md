@@ -18,7 +18,7 @@ A classic seven-segment display for showing single digits or characters.
 - Resizable (1-32 units)
 - Standard seven-segment layout
 
-**Location:** [`src/client/SevenSegment/SevenSegmentClient.cs`](https://github.com/Pix/logic_utils/blob/main/logic_utils/src/client/SevenSegment/SevenSegmentClient.cs)
+**Location:** [`src/client/SevenSegment/SevenSegmentClient.cs`](https://github.com/Pixailz/LW_mods/blob/main/logic_utils/src/client/SevenSegment/SevenSegmentClient.cs)
 
 ## **Configuration**
 
@@ -29,7 +29,7 @@ A classic seven-segment display for showing single digits or characters.
 
 ### in code
 
-[Config.cs](https://github.com/Pix/logic_utils/blob/main/logic_utils/src/shared/Config.cs#L92)
+[Config.cs](https://github.com/Pixailz/LW_mods/blob/main/logic_utils/src/shared/Config.cs#L92)
 
 - **BlockColor**: Sets the base color of the display block. Default is `Color24.Black`.
 - **OffColor**: Color when segments are off. Default is `new Color24(20, 20, 20)`.

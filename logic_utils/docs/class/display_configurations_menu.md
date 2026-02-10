@@ -13,7 +13,7 @@
 Abstract base class for display configuration menus in Logic World. Provides a standardized interface for components with configurable bits per pixel (BPP) and color configurations.
 
 - **Inherits:** `EditComponentMenu`, implements `IAssignMyFields`
-- **Location:** [src/client/MenuUtils/DisplayConfigurationMenuBase.cs](https://github.com/Pix/logic_utils/blob/main/logic_utils/src/client/MenuUtils/DisplayConfigurationMenuBase.cs)
+- **Location:** [src/client/MenuUtils/DisplayConfigurationMenuBase.cs](https://github.com/Pixailz/LW_mods/blob/main/logic_utils/src/client/MenuUtils/DisplayConfigurationMenuBase.cs)
 
 ## Key Features
 

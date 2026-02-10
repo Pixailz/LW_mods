@@ -18,7 +18,7 @@ A binary-to-decimal decoder component that activates one output based on binary 
 - Flippable component
 - Fine rotation allowed
 
-**Location:** [`src/client/Decoder/DecoderPrefab.cs`](https://github.com/Pix/logic_utils/blob/main/logic_utils/src/client/Decoder/DecoderPrefab.cs)
+**Location:** [`src/client/Decoder/DecoderPrefab.cs`](https://github.com/Pixailz/LW_mods/blob/main/logic_utils/src/client/Decoder/DecoderPrefab.cs)
 
 ## **Configuration**
 
@@ -28,7 +28,7 @@ A binary-to-decimal decoder component that activates one output based on binary 
 
 ### in code
 
-[Config.cs](https://github.com/Pix/logic_utils/blob/main/logic_utils/src/shared/Config.cs#L22)
+[Config.cs](https://github.com/Pixailz/LW_mods/blob/main/logic_utils/src/shared/Config.cs#L22)
 
 - **BlockColor**: Sets the color of the decoder block. Default is `Color24.AbsoluteZero`.
 - **BlockHeight**: Height of the decoder block. Default is `1f`.

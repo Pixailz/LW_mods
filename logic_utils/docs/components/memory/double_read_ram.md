@@ -30,7 +30,7 @@ An enhanced RAM component that can read from two addresses simultaneously.
 
 ### in code
 
-[Config.cs](https://github.com/Pix/logic_utils/blob/main/logic_utils/src/shared/Config.cs#71)
+[Config.cs](https://github.com/Pixailz/LW_mods/blob/main/logic_utils/src/shared/Config.cs#71)
 
 - **BlockColor**: Sets the color of the RAM block. Default is `Color24.AcidGreen`.
 - **BlockDepth**: Defines the depth of the RAM block in the game. Default is `2f`.

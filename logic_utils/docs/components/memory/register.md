@@ -21,7 +21,7 @@ A configurable register component with various control pins and flexible bit wid
 - Increment/Decrement pins
 - Configurable width (2-64 bits in 2-bit steps)
 
-**Location:** [`src/client/RegisterPrefab.cs`](https://github.com/Pix/logic_utils/blob/main/logic_utils/src/client/RegisterPrefab.cs)
+**Location:** [`src/client/RegisterPrefab.cs`](https://github.com/Pixailz/LW_mods/blob/main/logic_utils/src/client/RegisterPrefab.cs)
 
 ## **Configuration**
 
@@ -31,7 +31,7 @@ A configurable register component with various control pins and flexible bit wid
 
 ### in code
 
-[Config.cs](https://github.com/Pix/logic_utils/blob/main/logic_utils/src/shared/Config.cs#L36)
+[Config.cs](https://github.com/Pixailz/LW_mods/blob/main/logic_utils/src/shared/Config.cs#L36)
 
 - **BlockColor**: Sets the color of the register block. Default is `Color24.Acajou`.
 - **BlockHeight**: Height of the register block. Default is `2f`.
