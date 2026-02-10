@@ -3,9 +3,9 @@
 ## Preview
 
 <p>
-  <img src="https://github.com/Pix/logic_utils/blob/main/logic_utils/docs/assets/screen/front.jpg" alt="Screen Display Front" width="300"/>
-  <img src="https://github.com/Pix/logic_utils/blob/main/logic_utils/docs/assets/screen/back.jpg" alt="Screen Display Back" width="300"/>
-  <img src="https://github.com/Pix/logic_utils/blob/main/logic_utils/docs/assets/screen/menu.png" alt="Screen Display Menu" width="600"/>
+  <img src="https://github.com/Pixailz/LW_mods/blob/main/logic_utils/docs/assets/screen/front.jpg" alt="Screen Display Front" width="300"/>
+  <img src="https://github.com/Pixailz/LW_mods/blob/main/logic_utils/docs/assets/screen/back.jpg" alt="Screen Display Back" width="300"/>
+  <img src="https://github.com/Pixailz/LW_mods/blob/main/logic_utils/docs/assets/screen/menu.png" alt="Screen Display Menu" width="600"/>
 </p>
 
 ## Description

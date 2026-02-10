@@ -3,9 +3,9 @@
 ## Preview
 
 <p>
-  <img src="https://github.com/Pix/logic_utils/blob/main/logic_utils/docs/assets/ram/front.jpg" alt="RAM Front" width="300"/>
-  <img src="https://github.com/Pix/logic_utils/blob/main/logic_utils/docs/assets/ram/back.jpg" alt="RAM Back" width="300"/>
-  <img src="https://github.com/Pix/logic_utils/blob/main/logic_utils/docs/assets/ram/menu.png" alt="RAM Menu" width="600"/>
+  <img src="https://github.com/Pixailz/LW_mods/blob/main/logic_utils/docs/assets/ram/front.jpg" alt="RAM Front" width="300"/>
+  <img src="https://github.com/Pixailz/LW_mods/blob/main/logic_utils/docs/assets/ram/back.jpg" alt="RAM Back" width="300"/>
+  <img src="https://github.com/Pixailz/LW_mods/blob/main/logic_utils/docs/assets/ram/menu.png" alt="RAM Menu" width="600"/>
 </p>
 
 ## Description

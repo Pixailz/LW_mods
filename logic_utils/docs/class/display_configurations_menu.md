@@ -3,9 +3,9 @@
 ## Preview
 
 <p>
-  <img src="https://github.com/Pix/logic_utils/blob/main/logic_utils/docs/assets/display_configurations_menu/main.jpg" alt="Display Configurations Main menu" width="600"/>
-  <img src="https://github.com/Pix/logic_utils/blob/main/logic_utils/docs/assets/display_configurations_menu/edit_configurations.jpg" alt="Display Configurations Edit Configurations" width="300"/>
-  <img src="https://github.com/Pix/logic_utils/blob/main/logic_utils/docs/assets/display_configurations_menu/edit_configuration.png" alt="Display Configurations Edit Configuration" width="300"/>
+  <img src="https://github.com/Pixailz/LW_mods/blob/main/logic_utils/docs/assets/display_configurations_menu/main.jpg" alt="Display Configurations Main menu" width="600"/>
+  <img src="https://github.com/Pixailz/LW_mods/blob/main/logic_utils/docs/assets/display_configurations_menu/edit_configurations.jpg" alt="Display Configurations Edit Configurations" width="300"/>
+  <img src="https://github.com/Pixailz/LW_mods/blob/main/logic_utils/docs/assets/display_configurations_menu/edit_configuration.png" alt="Display Configurations Edit Configuration" width="300"/>
 </p>
 
 ## Description

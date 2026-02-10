@@ -3,9 +3,9 @@
 ## Preview
 
 <p>
-  <img src="https://github.com/Pix/logic_utils/blob/main/logic_utils/docs/assets/double_read_ram/front.jpg" alt="Double Read RAM Front" width="300"/>
-  <img src="https://github.com/Pix/logic_utils/blob/main/logic_utils/docs/assets/double_read_ram/back.jpg" alt="Double Read RAM Back" width="300"/>
-  <img src="https://github.com/Pix/logic_utils/blob/main/logic_utils/docs/assets/double_read_ram/menu.png" alt="Double Read RAM Menu" width="600"/>
+  <img src="https://github.com/Pixailz/LW_mods/blob/main/logic_utils/docs/assets/double_read_ram/front.jpg" alt="Double Read RAM Front" width="300"/>
+  <img src="https://github.com/Pixailz/LW_mods/blob/main/logic_utils/docs/assets/double_read_ram/back.jpg" alt="Double Read RAM Back" width="300"/>
+  <img src="https://github.com/Pixailz/LW_mods/blob/main/logic_utils/docs/assets/double_read_ram/menu.png" alt="Double Read RAM Menu" width="600"/>
 </p>
 
 ## Description

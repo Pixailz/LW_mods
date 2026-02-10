@@ -4,9 +4,9 @@
 ## Preview
 
 <p>
-	<img src="https://github.com/Pix/logic_utils/blob/main/logic_utils/docs/assets/register/front.jpg" alt="Register Front" width="300"/>
-	<img src="https://github.com/Pix/logic_utils/blob/main/logic_utils/docs/assets/register/back.jpg" alt="Register Back" width="300"/>
-	<img src="https://github.com/Pix/logic_utils/blob/main/logic_utils/docs/assets/register/menu.png" alt="Register Menu" width="600"/>
+	<img src="https://github.com/Pixailz/LW_mods/blob/main/logic_utils/docs/assets/register/front.jpg" alt="Register Front" width="300"/>
+	<img src="https://github.com/Pixailz/LW_mods/blob/main/logic_utils/docs/assets/register/back.jpg" alt="Register Back" width="300"/>
+	<img src="https://github.com/Pixailz/LW_mods/blob/main/logic_utils/docs/assets/register/menu.png" alt="Register Menu" width="600"/>
 </p>
 
 ## Description

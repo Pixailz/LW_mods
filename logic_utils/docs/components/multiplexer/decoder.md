@@ -3,9 +3,9 @@
 ## Preview
 
 <p>
-  <img src="https://github.com/Pix/logic_utils/blob/main/logic_utils/docs/assets/decoder/front.jpg" alt="Decoder Front" width="300"/>
-  <img src="https://github.com/Pix/logic_utils/blob/main/logic_utils/docs/assets/decoder/back.jpg" alt="Decoder Back" width="300"/>
-  <img src="https://github.com/Pix/logic_utils/blob/main/logic_utils/docs/assets/decoder/menu.png" alt="Decoder Menu" width="600"/>
+  <img src="https://github.com/Pixailz/LW_mods/blob/main/logic_utils/docs/assets/decoder/front.jpg" alt="Decoder Front" width="300"/>
+  <img src="https://github.com/Pixailz/LW_mods/blob/main/logic_utils/docs/assets/decoder/back.jpg" alt="Decoder Back" width="300"/>
+  <img src="https://github.com/Pixailz/LW_mods/blob/main/logic_utils/docs/assets/decoder/menu.png" alt="Decoder Menu" width="600"/>
 </p>
 
 ## Description

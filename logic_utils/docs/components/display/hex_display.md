@@ -3,9 +3,9 @@
 ## Preview
 
 <p>
-  <img src="https://github.com/Pix/logic_utils/blob/main/logic_utils/docs/assets/hex_display/front.jpg" alt="Hexadecimal Display Front" width="300"/>
-  <img src="https://github.com/Pix/logic_utils/blob/main/logic_utils/docs/assets/hex_display/back.jpg" alt="Hexadecimal Display Back" width="300"/>
-  <img src="https://github.com/Pix/logic_utils/blob/main/logic_utils/docs/assets/hex_display/menu.png" alt="Hexadecimal Display Menu" width="600"/>
+  <img src="https://github.com/Pixailz/LW_mods/blob/main/logic_utils/docs/assets/hex_display/front.jpg" alt="Hexadecimal Display Front" width="300"/>
+  <img src="https://github.com/Pixailz/LW_mods/blob/main/logic_utils/docs/assets/hex_display/back.jpg" alt="Hexadecimal Display Back" width="300"/>
+  <img src="https://github.com/Pixailz/LW_mods/blob/main/logic_utils/docs/assets/hex_display/menu.png" alt="Hexadecimal Display Menu" width="600"/>
 </p>
 
 ## Description

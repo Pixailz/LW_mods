@@ -3,9 +3,9 @@
 ## Preview
 
 <p>
-  <img src="https://github.com/Pix/logic_utils/blob/main/logic_utils/docs/assets/seven_segment/front.jpg" alt="Seven Segment Display Front" width="300"/>
-  <img src="https://github.com/Pix/logic_utils/blob/main/logic_utils/docs/assets/seven_segment/back.jpg" alt="Seven Segment Display Back" width="300"/>
-  <img src="https://github.com/Pix/logic_utils/blob/main/logic_utils/docs/assets/seven_segment/menu.png" alt="Seven Segment Display Menu" width="600"/>
+  <img src="https://github.com/Pixailz/LW_mods/blob/main/logic_utils/docs/assets/seven_segment/front.jpg" alt="Seven Segment Display Front" width="300"/>
+  <img src="https://github.com/Pixailz/LW_mods/blob/main/logic_utils/docs/assets/seven_segment/back.jpg" alt="Seven Segment Display Back" width="300"/>
+  <img src="https://github.com/Pixailz/LW_mods/blob/main/logic_utils/docs/assets/seven_segment/menu.png" alt="Seven Segment Display Menu" width="600"/>
 </p>
 
 ## Description
