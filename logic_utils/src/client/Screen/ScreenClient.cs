@@ -4,6 +4,8 @@ using LogicWorld.ClientCode.Resizing;
 using JimmysUnityUtilities;
 using UnityEngine;
 using System;
+using System.Timers;
+
 using LogicWorld.Interfaces;
 
 using PixLogicUtils.Shared.Utils;
@@ -23,12 +25,29 @@ namespace PixLogicUtils.Client
 
 		private int currentSize = 0;
 
-		private Texture2D displayTexture;
-		private Color[] pixelBuffer;
+		private Texture2D	displayTexture;
+		private Color[]		pixelBuffer;
+		private Color[]		currentColors;
+		private int			pixelCoverage;
+
+		private Timer		renderFrameTimer = null;
 
 		protected override void Initialize()
 		{
-			// syncIfNeeded();
+			if (renderFrameTimer == null)
+			{
+				renderFrameTimer = new Timer
+				{
+					Interval = 1_000 / 60,
+					AutoReset = true
+				};
+
+				renderFrameTimer.Elapsed += (sender, e) =>
+				{
+					QueueRenderPixelBuffer();
+				};
+				renderFrameTimer.Start();
+			}
 		}
 
 		protected override void SetDataDefaultValues()
@@ -40,10 +59,6 @@ namespace PixLogicUtils.Client
 		{
 			if (displayTexture != null)
 			{
-				// displayTexture = new Texture2D(width, height)
-				// {
-				// 	filterMode = FilterMode.Point
-				// };
 				displayTexture.Reinitialize(width, height);
 			}
 			else
@@ -57,88 +72,27 @@ namespace PixLogicUtils.Client
 
 		public void syncIfNeeded()
 		{
-			bool pixelBufferMismatch =
-				pixelBuffer == null
-				|| pixelBuffer.Length != this.Data.ResolutionX * this.Data.ResolutionY;
-			bool textureMismatch =
+			if (
 				displayTexture == null
 				|| displayTexture.width != this.Data.ResolutionX
-				|| displayTexture.height != this.Data.ResolutionY;
-			bool pixelDataMismatch =
-				this.Data.PixelData == null
-				|| this.Data.PixelData.Length != this.Data.ResolutionX * this.Data.ResolutionY;
-			int res_x =
-				this.Data.ResolutionX != 0
-				? this.Data.ResolutionX
-				: CScreen.DefaultResolutionX;
-			int res_y =
-				this.Data.ResolutionY != 0
-				? this.Data.ResolutionY
-				: CScreen.DefaultResolutionY;
-			if (pixelBufferMismatch)
+				|| displayTexture.height != this.Data.ResolutionY
+			)
 			{
-				Logger.Info(
-					$"Pixel buffer mismatch: {(
-						pixelBuffer == null
-						? "null"
-						: $"length={pixelBuffer.Length}"
-					)}, expected length={this.Data.ResolutionX * this.Data.ResolutionY}"
-				);
-				pixelBuffer = new Color[res_x * res_y];
-			}
-			if (textureMismatch)
-			{
-				Logger.Info(
-					$"Display texture mismatch: {(
-						displayTexture == null
-						? "null"
-						: $"{displayTexture.width}x{displayTexture.height}"
-					)}, expected size={Data.ResolutionX}x{Data.ResolutionY}"
-				);
+				int res_x =
+					this.Data.ResolutionX != 0
+					? this.Data.ResolutionX
+					: CScreen.DefaultResolutionX;
+				int res_y =
+					this.Data.ResolutionY != 0
+					? this.Data.ResolutionY
+					: CScreen.DefaultResolutionY;
 				createTexture(res_x, res_y);
-			}
-			if (pixelDataMismatch)
-			{
-				Logger.Info(
-					$"Pixel data mismatch: {(
-						Data.PixelData == null
-						? "null"
-						: $"length={Data.PixelData.Length}"
-					)}, expected length={res_x * res_y}"
-				);
-				this.Data.PixelData = new byte[res_x * res_y];
-			}
-			if (pixelBufferMismatch || textureMismatch)
-			{
+				pixelBuffer = new Color[res_x * res_y];
 				currentSize = 0;
 			}
 		}
 
-		private void debug_put_pixel_in_corner(Color[] currentColors)
-		{
-			Color upper_right = Converter.ToColor(Color24.Red);
-			Color lower_left = Converter.ToColor(Color24.Blue);
-			Color upper_left = Converter.ToColor(Color24.Green);
-			Color lower_right = Converter.ToColor(Color24.Yellow);
-
-			if (currentColors != null && currentColors.Length >= 4)
-			{
-				upper_right = currentColors[0];
-				lower_left = currentColors[1];
-				upper_left = currentColors[2];
-				lower_right = currentColors[3];
-			}
-			// upper right
-			pixelBuffer[0] = upper_right;
-			// lower left
-			pixelBuffer[Data.ResolutionY * Data.ResolutionX - 1] = lower_left;
-			// upper left
-			pixelBuffer[Data.ResolutionX - 1] = upper_left;
-			// lower right
-			pixelBuffer[Data.ResolutionX * (Data.ResolutionY - 1)] = lower_right;
-		}
-
-		private void debug_put_data_in_corner(Color[] currentColors)
+		private void debug_put_data_in_corner()
 		{
 			byte upper_right = 1;
 			byte lower_left = 1;
@@ -164,10 +118,25 @@ namespace PixLogicUtils.Client
 			UpdateScaleIfNeeded();
 			QueueFrameUpdate();
 		}
+		private bool can_render = false;
+
+		private void QueueRenderPixelBuffer()
+		{
+			if (this.can_render)
+				return ;
+			this.can_render = true;
+		}
 
 		protected override void FrameUpdate()
 		{
-			RenderPixelBufferToTexture();
+			if (!this.can_render)
+				return ;
+			currentColors = getColorFromConfig();
+			pixelCoverage = (int)Math.Floor(
+				(float)(CScreen.DefaultDataSize / this.Data.BitsPerPixel)
+			);
+			RenderPixelBufferToTextureNew();
+			this.can_render = false;
 		}
 
 		private Color[] getColorFromConfig()
@@ -182,63 +151,89 @@ namespace PixLogicUtils.Client
 			if (displayConfigs != null)
 			{
 				var configAddress = new DisplayConfigurationAddress(
-					Data.BitsPerPixel,
-					Data.ConfigurationIndex
+					this.Data.BitsPerPixel,
+					this.Data.ConfigurationIndex
 				);
 				displayConfigs.RunOnConfiguration(configAddress, (colors) =>
 				{
-					if (colors != null && colors.Length == (1 << Data.BitsPerPixel))
+					if (colors != null && colors.Length == (1 << this.Data.BitsPerPixel))
 					{
 						retv = Converter.ToColor(colors);
-					}
-					else
-					{
-						Logger.Warn($"[Screen] ConfigIndex={Data.ConfigurationIndex}, BPP={Data.BitsPerPixel}, Colors array is null or has invalid length (length={colors?.Length ?? 0})");
 					}
 				});
 			}
 			return retv;
 		}
 
-		public void RenderPixelBufferToTexture()
+		public void RenderPixelBufferToTextureOld()
 		{
-			Color[] currentColors = getColorFromConfig();
-
-			syncIfNeeded();
-
-			if (currentColors == null || currentColors.Length == 0)
-			{
-				int colorCount = 1 << Data.BitsPerPixel;
-				currentColors = new Color[colorCount];
-				for (int i = 0; i < colorCount; i++)
-				{
-					float grayscale = i / (float)(colorCount - 1);
-					currentColors[i] = new Color(grayscale, grayscale, grayscale);
-				}
-			}
-
 			// this.debug_put_data_in_corner(currentColors);
 
-			for (int y = 0; y < Data.ResolutionY; y++)
+			for (int i = 0; i < this.Data.PixelData.Length; i++)
 			{
-				for (int x = 0; x < Data.ResolutionX; x++)
-				{
-					// int index = y * Data.ResolutionX + x;
-					// if (index < pixelBuffer.Length)
-					// {
-					// 	int invertedIndex = (Data.ResolutionY - 1 - y) * Data.ResolutionX + x;
-					// 	pixelBuffer[invertedIndex] = pixelBuffer[index];
-					// }
-					int index = y * Data.ResolutionX + x;
-					int color_index = Data.PixelData[index] % currentColors.Length;
-					pixelBuffer[index] = currentColors[color_index];
-				}
+				int color_index = Data.PixelData[i] % currentColors.Length;
+				pixelBuffer[i] = currentColors[color_index];
 			}
 
 			// this.debug_put_pixel_in_corner(currentColors);
 
 			displayTexture.SetPixels(pixelBuffer);
 			displayTexture.Apply();
+			Logger.Info("Frame Updated");
+		}
+
+		private t_data lastAddress = 0;
+
+		public void RenderPixelBufferToTexture(int start, int end)
+		{
+			for (
+				int i = start;
+				i < end && i < this.Data.PixelData.Length;
+				i++
+			)
+			{
+				int color_index = this.Data.PixelData[i] % currentColors.Length;
+				int x = i % this.Data.ResolutionX;
+				int y = i / this.Data.ResolutionX;
+
+				displayTexture.SetPixel(x, y, currentColors[color_index]);
+			}
+		}
+
+		public void RenderPixelBufferToTextureNewNormal()
+		{
+			this.RenderPixelBufferToTexture(
+				(int)this.lastAddress,
+				(int)this.Data.CurrentAddress
+			);
+		}
+
+		public void RenderPixelBufferToTextureNewCutted(t_data maxAddress)
+		{
+			this.RenderPixelBufferToTexture(
+				(int)this.lastAddress,
+				(int)maxAddress
+			);
+			this.RenderPixelBufferToTexture(
+				0,
+				(int)this.Data.CurrentAddress
+			);
+		}
+
+		public void RenderPixelBufferToTextureNew()
+		{
+			t_data maxAddress =
+				(t_data)(this.Data.ResolutionX * this.Data.ResolutionY);
+
+			if (this.lastAddress < this.Data.CurrentAddress)
+				this.RenderPixelBufferToTextureNewNormal();
+			else
+				this.RenderPixelBufferToTextureNewCutted(maxAddress);
+
+			// this.debug_put_data_in_corner();
+
+			displayTexture.Apply();
+			lastAddress = this.Data.CurrentAddress;
 		}
 
 		protected override IDecoration[] GenerateDecorations(Transform parentToCreateDecorationsUnder)
@@ -265,11 +260,6 @@ namespace PixLogicUtils.Client
 			[
 				new Decoration
 				{
-					// LocalPosition = new Vector3(
-					// 	(currentScale * Data.ResolutionX / 2f - 0.5f) * CGlobal.DecorationScale,
-					// 	(currentScale * Data.ResolutionY / 2f) * CGlobal.DecorationScale,
-					// 	(-0.25f * CGlobal.DecorationScale) - 0.0005f
-					// ),
 					LocalRotation = Quaternion.Euler(0f, 180f, 180f),
 					DecorationObject = quadObject,
 					AutoSetupColliders = true,
@@ -315,24 +305,24 @@ namespace PixLogicUtils.Client
 
 			// Base block
 			SetBlockPosition(0, new Vector3(
-				CGlobal.LSBDir * ((Data.ResolutionX * scale / 2f) - CGlobal.Offset),
+				CGlobal.LSBDir * ((this.Data.ResolutionX * scale / 2f) - CGlobal.Offset),
 				0f,
 				0f
 			));
 			SetBlockScale(0, new Vector3(
-				scale * Data.ResolutionX,
-				scale * Data.ResolutionY,
+				scale * this.Data.ResolutionX,
+				scale * this.Data.ResolutionY,
 				CScreen.BlockDepth
 			));
 
 			// Decoration (texture)
 			SetDecorationPosition(0, new Vector3(
-				((Data.ResolutionX * scale / 2f) - CGlobal.Offset) * CGlobal.LSBDir * CGlobal.DecorationScale,
-				(Data.ResolutionY * scale / 2f) * CGlobal.DecorationScale,
+				((this.Data.ResolutionX * scale / 2f) - CGlobal.Offset) * CGlobal.LSBDir * CGlobal.DecorationScale,
+				(this.Data.ResolutionY * scale / 2f) * CGlobal.DecorationScale,
 				(0.25f * CGlobal.DecorationScale) + 0.0005f
 			));
 			SetDecorationScale(0, new Vector3(
-				scale * Data.ResolutionX * CGlobal.DecorationScale,
+				scale * this.Data.ResolutionX * CGlobal.DecorationScale,
 				scale * Data.ResolutionY * CGlobal.DecorationScale,
 				1f
 			));

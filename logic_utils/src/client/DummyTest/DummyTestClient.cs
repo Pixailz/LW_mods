@@ -1,17 +1,13 @@
 using LogicWorld.Rendering.Components;
+using PixLogicUtils.Shared.CustomData;
 
 namespace PixLogicUtils.Client
 {
-    public class DummyTestClient : ComponentClientCode<DummyTestClient.IData>
-    {
-        public interface IData
-        {
-            int testValue { get; set; }
-        }
-
-        protected override void SetDataDefaultValues()
-        {
-            Data.testValue = 0;
-        }
-    }
+	public class DummyTestClient : ComponentClientCode<IDummyData>
+	{
+		protected override void SetDataDefaultValues()
+		{
+			this.Data.Initialize();
+		}
+	}
 }

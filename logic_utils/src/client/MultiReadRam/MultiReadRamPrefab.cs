@@ -8,18 +8,18 @@ using LICC;
 
 namespace PixLogicUtils.Client
 {
-    public class MultiReadRamPrefab : DynamicPrefabGenerator<(
+	public class MultiReadRamPrefab : DynamicPrefabGenerator<(
 		int InputCount, int OutputCount
 	)>
-    {
-        public t_width	readNumber;
+	{
+		public t_width	readNumber;
 		private t_width	dataWidth;
 		private t_width	addressWidth;
 
 		private float	width;
 		private float	height;
 
-        public override (int inputCount, int outputCount) GetDefaultPegCounts()
+		public override (int inputCount, int outputCount) GetDefaultPegCounts()
 		{
 			t_pin default_input =
 				CMultiReadRam.DefaultDataWidth +
@@ -29,17 +29,17 @@ namespace PixLogicUtils.Client
 			return (default_input, default_output);
 		}
 
-        protected override
+		protected override
 			(int InputCount, int OutputCount) GetIdentifierFor(
 					ComponentData componentData
 				)
 				=> (componentData.InputCount, componentData.OutputCount);
 
-        public override void Setup(ComponentInfo info)
-        {
+		public override void Setup(ComponentInfo info)
+		{
 			readNumber = info.CodeInfoInts[0];
 			height = readNumber + 1f;
-        }
+		}
 
 		public void	updateInputOutput(int InputCount, int OutputCount)
 		{

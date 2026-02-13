@@ -1,6 +1,5 @@
 using JimmysUnityUtilities;
 using UnityEngine;
-using LICC;
 using System;
 
 namespace PixLogicUtils.Shared.Config
@@ -462,11 +461,130 @@ namespace PixLogicUtils.Shared.Config
 		public static readonly int	MaxResolutionY = MaxResolutionX;
 		public static readonly int	DefaultResolutionY = DefaultResolutionX;
 
+		public static readonly int	MaxDelayOnEndPulse = 16;
+		public static readonly int	MinDelayOnEndPulse = -MaxDelayOnEndPulse;
+		public static readonly int	DefaultDelayOnEndPulse = 0;
+
 		public static class Pin
 		{
 			public static readonly t_pin	EndPulse = 0;
 			public static readonly t_pin	Clock = 0;
 			public static readonly t_pin	DataStart = 1;
 		}
+	}
+
+	public static class CDoubleDabble
+	{
+		public static readonly Color24	BlockColor = Color24.Aero;
+		public static readonly float	BlockDepth = 1f;
+		public static readonly float	BlockHeight = 1f;
+
+		public static readonly t_width	DefaultDataWidth	= 4;
+		public static readonly t_width	MaxDataWidth		= 64;
+		public static readonly t_pin	MinDataWidth		= 4;
+		public static readonly t_pin	StepDataWidth		= 4;
+
+		public static readonly float	DataPinLength		= CGlobal.DataPinLength;
+		public static readonly float	DataPinLengthStep	= CGlobal.DataPinLengthStep;
+		public static readonly float	ActionPinLength		= CGlobal.ActionPinLength;
+
+		public static readonly t_pin	DefaultInput	= DefaultDataWidth;
+		public static readonly t_pin	DefaultOutput	= WidthToOutput(DefaultInput);
+
+		public static class Pin
+		{
+			public static readonly t_pin	DataStart	= 0;
+		}
+
+		public static t_pin WidthToOutput(t_width width)
+		{
+			if (width == 64)
+				return 80;
+			double n = Math.Pow(2, width) - 1;
+			return ((ulong)n).ToString().Length * 4;
+		}
+
+		// public static t_width OutputToWidth(t_pin output)
+		// {
+		// 	int len_dec = output / 4;
+		// 	double min_value = Math.Pow(10, len_dec - 1);
+		// 	int width_raw = (int)Math.Ceiling(Math.Log2(min_value + 1));
+
+		// 	t_width div = width_raw / 4;
+		// 	t_width mod = width_raw % 4 > 0 ? 1 : 0;
+
+		// 	return (div + mod) * 4;
+		// }
+	}
+
+	public static class CPulser
+	{
+		public static readonly Color24	BlockColor = Color24.AfricanViolet;
+
+		public static readonly float	BlockDepth	= 1f;
+		public static readonly float	BlockHeight	= 1f;
+		public static readonly float	BlockWidth	= 1f;
+
+		public static readonly int	DefaultInput	= 2;
+		public static readonly int	DefaultOutput	= 0;
+
+		public static readonly float	ActionPinLength		= CGlobal.ActionPinLength;
+
+		public static class Pin
+		{
+			public static readonly t_pin	In = 0;
+			public static readonly t_pin	Out = 1;
+		}
+	}
+
+	public static class CMultiplexer
+	{
+		public static readonly Color24	BlockColor = Color24.AirForceBlueRAF;
+
+		public static readonly float	BlockDepth	= 1f;
+
+		public static readonly float	DataPinLength		= CGlobal.DataPinLength;
+		public static readonly float	DataPinLengthStep	= CGlobal.DataPinLengthStep;
+		public static readonly float	ActionPinLength		= CGlobal.ActionPinLength;
+
+		public static readonly t_width	DefaultDataWidth	= 4;
+		public static readonly t_width	MaxDataWidth		= 64;
+		public static readonly t_pin	MinDataWidth		= 1;
+		public static readonly t_pin	StepDataWidth		= 1;
+
+		public static readonly t_width	DefaultSelectorWidth	= 1;
+		public static readonly t_width	MaxSelectorWidth		= 4;
+		public static readonly t_pin	MinSelectorWidth		= 1;
+		public static readonly t_pin	StepSelectorWidth		= 1;
+
+		public static readonly int	DefaultInput	= (
+			DefaultDataWidth * (1 << DefaultSelectorWidth)
+		) + DefaultSelectorWidth;
+		public static readonly int	DefaultOutput	= DefaultDataWidth;
+
+	}
+
+	public static class CDemultiplexer
+	{
+		public static readonly Color24	BlockColor = Color24.AlabamaCrimson;
+
+		public static readonly float	BlockDepth	= 1f;
+
+		public static readonly float	DataPinLength		= CGlobal.DataPinLength;
+		public static readonly float	DataPinLengthStep	= CGlobal.DataPinLengthStep;
+		public static readonly float	ActionPinLength		= CGlobal.ActionPinLength;
+
+		public static readonly t_width	DefaultDataWidth	= 4;
+		public static readonly t_width	MaxDataWidth		= 64;
+		public static readonly t_pin	MinDataWidth		= 2;
+		public static readonly t_pin	StepDataWidth		= 1;
+
+		public static readonly t_width	DefaultSelectorWidth	= 1;
+		public static readonly t_width	MaxSelectorWidth		= 4;
+		public static readonly t_pin	MinSelectorWidth		= 1;
+		public static readonly t_pin	StepSelectorWidth		= 1;
+
+		public static readonly int	DefaultInput	= DefaultDataWidth + DefaultSelectorWidth;
+		public static readonly int	DefaultOutput	= DefaultDataWidth * (1 << DefaultSelectorWidth);
 	}
 }

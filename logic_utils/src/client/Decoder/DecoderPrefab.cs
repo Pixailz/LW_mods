@@ -9,27 +9,27 @@ using PixLogicUtils.Shared.Config;
 
 namespace PixLogicUtils.Client
 {
-    public class DecoderPrefab : DynamicPrefabGenerator<(int InputCount, int OutputCount)>
-    {
-        protected override (int InputCount, int OutputCount) GetIdentifierFor(ComponentData componentData)
-            => (componentData.InputCount, componentData.OutputCount);
+	public class DecoderPrefab : DynamicPrefabGenerator<(int InputCount, int OutputCount)>
+	{
+		protected override (int InputCount, int OutputCount) GetIdentifierFor(ComponentData componentData)
+			=> (componentData.InputCount, componentData.OutputCount);
 
-        public override (int inputCount, int outputCount) GetDefaultPegCounts()
-            => (CDecoder.DefaultInput, (int)CDecoder.DefaultOutput);
+		public override (int inputCount, int outputCount) GetDefaultPegCounts()
+			=> (CDecoder.DefaultInput, (int)CDecoder.DefaultOutput);
 
-        protected override Prefab GeneratePrefabFor((int InputCount, int OutputCount) identifier)
-        {
+		protected override Prefab GeneratePrefabFor((int InputCount, int OutputCount) identifier)
+		{
 			t_pin	n_output = 1 << identifier.InputCount;
 			float	offset_height = 0.5f * CDecoder.BlockHeight;
 			float	offset_depth = 0.5f * CDecoder.BlockDepth;
 
-			var inputs = new ComponentInput[identifier.InputCount];
+			ComponentInput[] inputs = new ComponentInput[identifier.InputCount];
 
 			float	length = CDecoder.DataPinLength;
 
 			for (int i = 0; i < identifier.InputCount; i++)
 			{
-                inputs[i] = new ComponentInput()
+				inputs[i] = new ComponentInput()
 				{
 					Position = new Vector3(
 						CGlobal.LSBDir * i,
@@ -42,7 +42,7 @@ namespace PixLogicUtils.Client
 				length += CDecoder.DataPinLengthStep;
 			};
 
-			var outputs = new ComponentOutput[n_output];
+			ComponentOutput[] outputs = new ComponentOutput[n_output];
 
 			for (int i = 0; i < n_output; i++)
 			{
@@ -53,13 +53,13 @@ namespace PixLogicUtils.Client
 						offset_height,
 						offset_depth
 					),
-                    Rotation = new Vector3(90f, 0f, 0f),
+					Rotation = new Vector3(90f, 0f, 0f),
 				};
 			};
 
-            return new Prefab()
-            {
-                Blocks = [
+			return new Prefab()
+			{
+				Blocks = [
 					new Block()
 					{
 						Scale = new Vector3(
@@ -75,9 +75,9 @@ namespace PixLogicUtils.Client
 						RawColor = CDecoder.BlockColor,
 					}
 				],
-                Inputs = inputs,
-                Outputs = outputs,
-            };
-        }
-    }
+				Inputs = inputs,
+				Outputs = outputs,
+			};
+		}
+	}
 }

@@ -4,7 +4,6 @@ using PixLogicUtils.Shared.CustomData;
 using PixLogicUtils.Shared.Config;
 using PixLogicUtils.Shared.Utils;
 
-
 namespace PixLogicUtils.Server
 {
 	public class RegisterServer : LogicComponent<IRegData>
@@ -13,12 +12,12 @@ namespace PixLogicUtils.Server
 
 		protected override void SetDataDefaultValues()
 		{
-			Data.Initialize();
+			this.Data.Initialize();
 		}
 
 		private void	ByteToOutputMode(int mode, t_width currentSize)
 		{
-			t_data value_tmp = Data.Value;
+			t_data value_tmp = this.Data.Value;
 
 			if (mode == 1)
 				value_tmp &= (t_data)~(1 << currentSize);
@@ -27,9 +26,9 @@ namespace PixLogicUtils.Server
 			Utils.ByteToOutput(Outputs, value_tmp, currentSize);
 		}
 
-		private byte	InputToByteMode(int mode, t_width currentSize, t_pin startData)
+		private t_data	InputToByteMode(int mode, t_width currentSize, t_pin startData)
 		{
-			t_data	retv = Data.Value;
+			t_data	retv = this.Data.Value;
 
 			if (mode == 1)
 				retv |= Utils.InputToByte(Inputs, currentSize, startData);
@@ -37,7 +36,7 @@ namespace PixLogicUtils.Server
 				retv |= Utils.InputToByte(Inputs, currentSize, startData) << currentSize;
 			else
 				retv = Utils.InputToByte(Inputs, currentSize, startData);
-			return (byte)retv;
+			return retv;
 		}
 
 
@@ -107,16 +106,16 @@ namespace PixLogicUtils.Server
 			{
 				if (Inputs[CRegister.Pin.Write].On)
 				{
-					Data.Value = InputToByteMode(mode, currentSize, startData);
+					this.Data.Value = InputToByteMode(mode, currentSize, startData);
 				}
 				if (Inputs[CRegister.Pin.Plus].On)
 				{
-					Data.Value++;
+					this.Data.Value++;
 					QueueLogicUpdate();
 				}
 				else if (Inputs[CRegister.Pin.Minus].On)
 				{
-					Data.Value--;
+					this.Data.Value--;
 					QueueLogicUpdate();
 				}
 			}

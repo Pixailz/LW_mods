@@ -7,16 +7,16 @@ using PixLogicUtils.Shared.Config;
 
 namespace PixLogicUtils.Client
 {
-    public class SevenSegmentPrefab : DynamicPrefabGenerator<int>
-    {
-        protected override int GetIdentifierFor(ComponentData componentData)
-            => componentData.InputCount;
+	public class SevenSegmentPrefab : DynamicPrefabGenerator<int>
+	{
+		protected override int GetIdentifierFor(ComponentData componentData)
+			=> componentData.InputCount;
 
-        public override (int inputCount, int outputCount) GetDefaultPegCounts()
-            => (CSevenSegment.DefaultInput, CSevenSegment.DefaultOutput);
+		public override (int inputCount, int outputCount) GetDefaultPegCounts()
+			=> (CSevenSegment.DefaultInput, CSevenSegment.DefaultOutput);
 
-        protected override Prefab GeneratePrefabFor(int inputCount)
-        {
+		protected override Prefab GeneratePrefabFor(int inputCount)
+		{
 			ComponentInput[] inputs = new ComponentInput[CSevenSegment.DefaultInput];
 			float length = CSevenSegment.DataPinLength;
 
@@ -66,12 +66,12 @@ namespace PixLogicUtils.Client
 				)
 			};
 
-            return new Prefab
-            {
-                Blocks = blocks,
-                Inputs = inputs,
-                Outputs = []
-            };
-        }
-    }
+			return new Prefab
+			{
+				Blocks = blocks,
+				Inputs = inputs,
+				Outputs = []
+			};
+		}
+	}
 }

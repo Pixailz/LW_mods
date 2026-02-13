@@ -1,0 +1,29 @@
+Decoder:
+    column: "Combinational"
+    category: "Decoder"
+    logicCode: PixLogicUtils.Server.DecoderServer
+    prefabGenerator: PixLogicUtils.Client.DecoderPrefab
+    placingRulesGenerator: PixLogicUtils.Client.DecoderPlacingRules
+
+DoubleDabble:
+    column: "Combinational"
+    category: "DoubleDabble"
+    logicCode: PixLogicUtils.Server.DoubleDabbleServer
+    prefabGenerator: PixLogicUtils.Client.DoubleDabblePrefab
+    placingRulesGenerator: PixLogicUtils.Client.DoubleDabblePlacingRules
+
+Multiplexer:
+    column: "Combinational"
+    category: "Multiplexer"
+    logicCode: PixLogicUtils.Server.MultiplexerServer
+    clientCode: PixLogicUtils.Client.MultiplexerClient
+    prefabGenerator: PixLogicUtils.Client.MultiplexerPrefab
+    placingRulesGenerator: PixLogicUtils.Client.MultiplexerPlacingRules
+
+Demultiplexer:
+    column: "Combinational"
+    category: "Demultiplexer"
+    logicCode: PixLogicUtils.Server.DemultiplexerServer
+    clientCode: PixLogicUtils.Client.DemultiplexerClient
+    prefabGenerator: PixLogicUtils.Client.DemultiplexerPrefab
+    placingRulesGenerator: PixLogicUtils.Client.DemultiplexerPlacingRules

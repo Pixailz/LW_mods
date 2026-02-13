@@ -11,17 +11,17 @@ using EccsLogicWorldAPI.Shared;
 
 namespace PixLogicUtils
 {
-    public class PixLogicUtilsClient : ClientMod
-    {
-        public static List<FileLoadable> fileLoadables = new List<FileLoadable>();
+	public class PixLogicUtilsClient : ClientMod
+	{
+		public static List<FileLoadable> fileLoadables = [];
 		public static object harmony;
 
-        protected override void Initialize()
-        {
+		protected override void Initialize()
+		{
 			HarmonyApplyPatches();
 			LoadMenus();
-            Logger.Info("[✔️] Client: loaded PixLogicUtils");
-        }
+			Logger.Info("[✔️] Client: loaded PixLogicUtils");
+		}
 
 		public void HarmonyPatchDiagramState(object harmony)
 		{
@@ -54,7 +54,7 @@ namespace PixLogicUtils
 		{
 			try
 			{
-                harmony = HarmonyAtRuntime.getHarmonyInstance("PixLogicUtils");
+				harmony = HarmonyAtRuntime.getHarmonyInstance("PixLogicUtils");
 				HarmonyPatchDiagramState(harmony);
 			}
 			catch (Exception e)
@@ -65,39 +65,42 @@ namespace PixLogicUtils
 
 		public void LoadMenus()
 		{
-            WorldHook.worldLoading += () => {
-                try
-                {
-                    RamMenu.init();
-                    DecoderMenu.init();
-                    RegisterMenu.init();
-                    HexDisplayMenu.init();
-                    ScreenMenu.init();
-                    DummyTestMenu.init();
-                }
-                catch(Exception e)
-                {
-                    Logger.Error("Could not initialize PixLogicUtils Menus");
-                    SceneAndNetworkManager.TriggerErrorScreen(e);
-                }
-            };
+			WorldHook.worldLoading += () => {
+				try
+				{
+					RamMenu.init();
+					DecoderMenu.init();
+					RegisterMenu.init();
+					HexDisplayMenu.init();
+					ScreenMenu.init();
+					DummyTestMenu.init();
+					DoubleDabbleMenu.init();
+					MultiplexerMenu.init();
+					DemultiplexerMenu.init();
+				}
+				catch(Exception e)
+				{
+					Logger.Error("Could not initialize PixLogicUtils Menus");
+					SceneAndNetworkManager.TriggerErrorScreen(e);
+				}
+			};
 		}
 
-        [Command("loadfile", Description = "Loads a file into any RAM components with the L pin active, does not clear out memory after the end of the file")]
-        public static void loadfile(string file)
-        {
-            LineWriter lineWriter = LConsole.BeginLine();
-            if (File.Exists(file))
-            {
-                var bs = File.ReadAllBytes(file);
-                foreach (var item in fileLoadables)
-                    item.Load(bs, lineWriter, false);
-            }
-            else
-            {
-                lineWriter.WriteLine($"Attempted to load file {file} that does not exist!");
-            }
-            lineWriter.End();
-        }
-    }
+		[Command("loadfile", Description = "Loads a file into any RAM components with the L pin active, does not clear out memory after the end of the file")]
+		public static void loadfile(string file)
+		{
+			LineWriter lineWriter = LConsole.BeginLine();
+			if (File.Exists(file))
+			{
+				var bs = File.ReadAllBytes(file);
+				foreach (var item in fileLoadables)
+					item.Load(bs, lineWriter, false);
+			}
+			else
+			{
+				lineWriter.WriteLine($"Attempted to load file {file} that does not exist!");
+			}
+			lineWriter.End();
+		}
+	}
 }

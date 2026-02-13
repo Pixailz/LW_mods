@@ -7,19 +7,19 @@ using PixLogicUtils.Shared.Config;
 
 namespace PixLogicUtils.Client
 {
-    public class RegisterPrefab : DynamicPrefabGenerator<(int InputCount, int OutputCount)>
-    {
-        public override (int inputCount, int outputCount) GetDefaultPegCounts()
-            => (CRegister.DefaultInput, CRegister.DefaultOutput);
+	public class RegisterPrefab : DynamicPrefabGenerator<(int InputCount, int OutputCount)>
+	{
+		public override (int inputCount, int outputCount) GetDefaultPegCounts()
+			=> (CRegister.DefaultInput, CRegister.DefaultOutput);
 
-        protected override (int InputCount, int OutputCount) GetIdentifierFor(ComponentData componentData)
+		protected override (int InputCount, int OutputCount) GetIdentifierFor(ComponentData componentData)
 			=> (componentData.InputCount, componentData.OutputCount);
 
-        public override void Setup(ComponentInfo info)
-        { }
+		public override void Setup(ComponentInfo info)
+		{ }
 
-        protected override Prefab GeneratePrefabFor((int InputCount, int OutputCount) identifier)
-        {
+		protected override Prefab GeneratePrefabFor((int InputCount, int OutputCount) identifier)
+		{
 			ComponentInput[] inputs = new ComponentInput[identifier.InputCount];
 			float x_comp = identifier.OutputCount / 2;
 
@@ -28,7 +28,7 @@ namespace PixLogicUtils.Client
 				Position = new Vector3(
 					-CGlobal.LSBDir * CGlobal.Offset,
 					0.75f * CRegister.BlockHeight,
-					-CGlobal.Offset + 0.25f * CRegister.BlockDepth
+					-CGlobal.Offset + 0.50f * CRegister.BlockDepth
 				),
 				Rotation = new Vector3(90f, CGlobal.LSBDir * -90f, 0f),
 				Length = CRegister.ActionPinLength,
@@ -81,7 +81,7 @@ namespace PixLogicUtils.Client
 			inputs[CRegister.Pin.Plus] = new ComponentInput()
 			{
 				Position = new Vector3(
-					0f,
+					CGlobal.LSBDir * -0.25f,
 					0.75f * CRegister.BlockHeight,
 					-0.5f
 				),
@@ -92,7 +92,7 @@ namespace PixLogicUtils.Client
 			inputs[CRegister.Pin.Minus] = new ComponentInput()
 			{
 				Position = new Vector3(
-					0f,
+					CGlobal.LSBDir * 0.25f,
 					0.25f * CRegister.BlockHeight,
 					-0.5f
 				),
@@ -134,9 +134,9 @@ namespace PixLogicUtils.Client
 				};
 			}
 
-            return new Prefab()
-            {
-                Blocks = [
+			return new Prefab()
+			{
+				Blocks = [
 					new Block()
 					{
 						Scale = new Vector3(
@@ -152,9 +152,9 @@ namespace PixLogicUtils.Client
 						RawColor = CRegister.BlockColor,
 					}
 				],
-                Inputs = inputs,
-                Outputs = outputs,
-            };
-        }
+				Inputs = inputs,
+				Outputs = outputs,
+			};
+		}
 	}
 }

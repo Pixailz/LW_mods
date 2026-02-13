@@ -13,3 +13,10 @@ PixLogicUtils.InputCount: "Input Count"
 
 PixLogicUtils.ResolutionX: "Resolution X"
 PixLogicUtils.ResolutionY: "Resolution Y"
+PixLogicUtils.DelayOnEndPulse: "Delay on End Pulse"
+
+PixLogicUtils.DoubleDabbleWidth: "Double Dabble Width"
+PixLogicUtils.MultiplexerWidth: "Multiplexer Width"
+PixLogicUtils.MultiplexerSelectorCount: "Multiplexer Selector Count"
+PixLogicUtils.DemultiplexerWidth: "Demultiplexer Width"
+PixLogicUtils.DemultiplexerSelectorCount: "Demultiplexer Selector Count"

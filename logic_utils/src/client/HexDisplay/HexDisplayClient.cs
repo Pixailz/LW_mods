@@ -1,6 +1,5 @@
 using LogicWorld.Rendering.Components;
 using LogicWorld.Rendering.Chunks;
-using LogicWorld.ClientCode;
 using LogicWorld.ClientCode.Resizing;
 using JimmysUnityUtilities;
 using UnityEngine;
@@ -10,6 +9,8 @@ using LogicWorld.Interfaces;
 using PixLogicUtils.Shared.Utils;
 using PixLogicUtils.Shared.Config;
 using PixLogicUtils.Shared.CustomData;
+using LogicWorld.Interfaces.Building;
+using System.Collections.Generic;
 
 namespace PixLogicUtils.Client
 {
@@ -111,10 +112,6 @@ namespace PixLogicUtils.Client
 					{
 						retv = Converter.ToColor(colors);
 					}
-					else
-					{
-						Logger.Warn($"[HexDisplay] ConfigIndex={this.Data.ConfigurationIndex}, BPP={CHexDisplay.FixedBPP}, Colors array is null or has invalid length (length={colors?.Length ?? 0})");
-					}
 				});
 			}
 			return retv;
@@ -182,7 +179,7 @@ namespace PixLogicUtils.Client
 					CGlobal.LSBDir * (
 						(scale * (CHexDisplay.OriginalWidth - 1f)) - (0.6f - scale * 0.6f)
 					),
-					1f,
+					1.5f,
 					-0.25f
 				)
 			);
@@ -198,7 +195,7 @@ namespace PixLogicUtils.Client
 					(
 						((i - CHexDisplay.Pin.DataStart) * scale) - (0.4f - scale * 0.4f)
 					) * CGlobal.LSBDir,
-					0.25f + (0.5f * CHexDisplay.OriginalScale),
+					0.50f + (0.5f * CHexDisplay.OriginalScale),
 					-0.25f
 				));
 			}
@@ -226,6 +223,35 @@ namespace PixLogicUtils.Client
 				scale * CHexDisplay.OriginalHeight * CGlobal.DecorationScale,
 				1f
 			));
+		}
+
+		protected override ChildPlacementInfo GenerateChildPlacementInfo()
+		{
+			List<FixedPlacingPoint> points = [];
+
+			if (this.Data.Size != 1)
+			{
+				float scale = GetCurrentScale();
+				points.Add(new FixedPlacingPoint
+				{
+					Position = new Vector3(
+						CGlobal.LSBDir * (
+							(scale * (CHexDisplay.OriginalWidth - 1f)) - (0.6f - scale * 0.6f)
+						),
+						2.5f,
+						-0.25f
+					),
+					UpDirection = new Vector3(
+						0f, 0f, -1f
+					),
+					Range = 100f,
+				});
+			}
+
+			return new ChildPlacementInfo
+			{
+				Points = [.. points]
+			};
 		}
 	}
 }

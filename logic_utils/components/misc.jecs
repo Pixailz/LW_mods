@@ -1,0 +1,13 @@
+DummyTest:
+    column: "Miscellaneous"
+    category: "Test"
+    logicCode: PixLogicUtils.Server.DummyTestServer
+    clientCode: PixLogicUtils.Client.DummyTestClient
+    prefabGenerator: PixLogicUtils.Client.DummyTestPrefab
+    placingRulesGenerator: PixLogicUtils.Client.DummyTestPlacingRules
+
+Pulser:
+    column: "Miscellaneous"
+    logicCode: PixLogicUtils.Server.PulserServer
+    prefabGenerator: PixLogicUtils.Client.PulserPrefab
+    placingRulesGenerator: PixLogicUtils.Client.PulserPlacingRules

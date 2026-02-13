@@ -1,20 +1,59 @@
+# ============================================================================ #
 ComponentColumn.Memory: "Memory"
-ComponentColumn.Plexer: "Plexer"
-ComponentColumn.Displays: "Displays"
-ComponentColumn.Utilities: "Utilities"
-
-ComponentCategory.Ram: "Ram"
+# ---------------------------------------------------------------------------- #
 ComponentCategory.Register: "Register"
-ComponentCategory.Multiplexer: "Multiplexer"
-ComponentCategory.SevenSegment: "Seven Segment"
-ComponentCategory.HexDisplay: "Hexadecimal"
-ComponentCategory.Screen: "Screen"
+
+PixLogicUtils.Register: "Register"
+# ---------------------------------------------------------------------------- #
+ComponentCategory.Ram: "Ram"
 
 PixLogicUtils.Ram: "RAM"
 PixLogicUtils.DoubleReadRam: "Double Read RAM"
-PixLogicUtils.Register: "Register"
-PixLogicUtils.Decoder: "Decoder"
-PixLogicUtils.SevenSegment: "Seven Segment Display"
-PixLogicUtils.HexDisplay: "Hexadecimal Display"
-PixLogicUtils.DummyTest: "Dummy Test Component"
+# ============================================================================ #
+
+# ============================================================================ #
+ComponentColumn.Displays: "Displays"
+# ---------------------------------------------------------------------------- #
+ComponentCategory.Screen: "Screen"
+
 PixLogicUtils.Screen: "Screen Display"
+# ---------------------------------------------------------------------------- #
+ComponentCategory.SevenSegment: "Seven Segment"
+
+PixLogicUtils.SevenSegment: "Seven Segment Display"
+# ---------------------------------------------------------------------------- #
+ComponentCategory.HexDisplay: "Hexadecimal"
+
+PixLogicUtils.HexDisplay: "Hexadecimal Display"
+# ============================================================================ #
+
+# ============================================================================ #
+ComponentColumn.Combinational: "Combinational Circuits"
+# ---------------------------------------------------------------------------- #
+ComponentCategory.Decoder: "Decoder"
+
+PixLogicUtils.Decoder: "Decoder"
+# ---------------------------------------------------------------------------- #
+ComponentCategory.DoubleDabble: "Double Dabble"
+
+PixLogicUtils.DoubleDabble: "Double Dabble"
+# ---------------------------------------------------------------------------- #
+ComponentCategory.Multiplexer: "Multiplexer"
+
+PixLogicUtils.Multiplexer: "Multiplexer"
+# ---------------------------------------------------------------------------- #
+ComponentCategory.Demultiplexer: "Demultiplexer"
+
+PixLogicUtils.Demultiplexer: "Demultiplexer"
+# ============================================================================ #
+
+# ============================================================================ #
+ComponentColumn.Miscellaneous: "Miscellaneous"
+# ---------------------------------------------------------------------------- #
+ComponentCategory.Test: "Test"
+
+PixLogicUtils.DummyTest: "Dummy Test Component"
+# ---------------------------------------------------------------------------- #
+
+PixLogicUtils.Pulser: "Pulser"
+# ============================================================================ #

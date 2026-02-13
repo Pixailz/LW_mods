@@ -5,16 +5,16 @@ using LogicAPI.Data;
 
 namespace PixLogicUtils.Client
 {
-    public class DummyTestPlacingRules : DynamicPlacingRulesGenerator<int>
-    {
-        protected override int GetIdentifierFor(ComponentData componentData)
-            => 0;
+	public class DummyTestPlacingRules : DynamicPlacingRulesGenerator<int>
+	{
+		protected override int GetIdentifierFor(ComponentData componentData)
+			=> 0;
 
-        protected override PlacingRules GeneratePlacingRulesFor(int identifier)
-        {
-            return new PlacingRules
-            {
-                AllowFineRotation = true,
+		protected override PlacingRules GeneratePlacingRulesFor(int identifier)
+		{
+			return new PlacingRules
+			{
+				AllowFineRotation = true,
 				// PrimaryGridPositions = [
 				// 	new Vector2(0.5f, 0.5f),
 				// 	new Vector2(1.5f, 0.5f),
@@ -48,7 +48,7 @@ namespace PixLogicUtils.Client
 				// AllowFineRotation = false,
 				// CanBeFlipped = true,
 				// FlippingPointHeight = 0.5f,
-            };
-        }
-    }
+			};
+		}
+	}
 }

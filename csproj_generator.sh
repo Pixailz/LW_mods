@@ -20,11 +20,14 @@ cat << EOF > "${OUT_FILE}"
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="src/**/*.cs" />
+    <Compile Include="${PATH_LOGIC_WORLD}/GameData/Ecconia_*/**/*.cs" />
+    <Compile Include="${PATH_LOGIC_WORLD}/GameData/Pix_logic_utils/src/shared/*.cs" />
+    <Compile Include="logic_utils/src/**/*.cs"/>
+    <Compile Include="mod_manager/src/**/*.cs"/>
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Include="${PATH_LOGIC_WORLD}/GameData/Ecconia_*/**/*.cs" />
+    <PackageReference Include="System.IO.Compression" Version="4.3.0" />
   </ItemGroup>
 
   <ItemGroup>

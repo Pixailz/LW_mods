@@ -12,71 +12,71 @@ using PixLogicUtils.Shared.Config;
 
 namespace PixLogicUtils.Client.Menus
 {
-    public class RegisterMenu : EditComponentMenu, IAssignMyFields
-    {
+	public class RegisterMenu : EditComponentMenu, IAssignMyFields
+	{
 		public static void init()
-        {
-            WS.window("PixLogicUtils - Register")
-                .setYPosition(150)
-                .configureContent(content => content
-                    .layoutVertical()
-                    .addContainer("BottomBox", bottomBox => bottomBox
-                        .injectionKey(nameof(bottomSection))
-                        .layoutVerticalInnerCentered()
-                        .addContainer("BottomInnerBox", innerBox => innerBox
-                            .layoutGrowGapVerticalInner()
-                            .addContainer("BottomBox1", container => container
-                                .layoutGrowGapHorizontalInnerCentered()
-                                .add(WS.textLine.setLocalizationKey("PixLogicUtils.RegisterWidth"))
-                                .add(WS.slider
-                                    .injectionKey(nameof(registerPegSlider))
-                                    .fixedSize(500, 45)
-                                    .setInterval(CRegister.StepInput)
-                                    .setMin(CRegister.MinInput)
-                                    .setMax(CRegister.MaxInput)
-                                )
-                            )
-                        )
-                    )
-                )
-                .add<RegisterMenu>()
-                .build();
-        }
+		{
+			WS.window("PixLogicUtils - Register")
+				.setYPosition(150)
+				.configureContent(content => content
+					.layoutVertical()
+					.addContainer("BottomBox", bottomBox => bottomBox
+						.injectionKey(nameof(bottomSection))
+						.layoutVerticalInnerCentered()
+						.addContainer("BottomInnerBox", innerBox => innerBox
+							.layoutGrowGapVerticalInner()
+							.addContainer("BottomBox1", container => container
+								.layoutGrowGapHorizontalInnerCentered()
+								.add(WS.textLine.setLocalizationKey("PixLogicUtils.RegisterWidth"))
+								.add(WS.slider
+									.injectionKey(nameof(registerPegSlider))
+									.fixedSize(500, 45)
+									.setInterval(CRegister.StepInput)
+									.setMin(CRegister.MinInput)
+									.setMax(CRegister.MaxInput)
+								)
+							)
+						)
+					)
+				)
+				.add<RegisterMenu>()
+				.build();
+		}
 
-        [AssignMe]
-        public InputSlider registerPegSlider;
-        [AssignMe]
-        public GameObject bottomSection;
+		[AssignMe]
+		public InputSlider registerPegSlider;
+		[AssignMe]
+		public GameObject bottomSection;
 
-        protected override void OnStartEditing()
-        {
+		protected override void OnStartEditing()
+		{
 			registerPegSlider.SetValueWithoutNotify(
 				FirstComponentBeingEdited.Component.Data.OutputCount
 			);
 			bottomSection.SetActive(true);
-        }
+		}
 
-        public override void Initialize()
-        {
-            base.Initialize();
-            registerPegSlider.OnValueChangedInt += registerCountChanged;
-        }
+		public override void Initialize()
+		{
+			base.Initialize();
+			registerPegSlider.OnValueChangedInt += registerCountChanged;
+		}
 
-        private void registerCountChanged(int newRegisterWidth)
-        {
-            BuildRequestManager.SendBuildRequest(new BuildRequest_ChangeDynamicComponentPegCounts(
-                FirstComponentBeingEdited.Address,
-                newRegisterWidth + CRegister.Pin.DataStart,
-                newRegisterWidth
-            ));
-        }
+		private void registerCountChanged(int newRegisterWidth)
+		{
+			BuildRequestManager.SendBuildRequest(new BuildRequest_ChangeDynamicComponentPegCounts(
+				FirstComponentBeingEdited.Address,
+				newRegisterWidth + CRegister.Pin.DataStart,
+				newRegisterWidth
+			));
+		}
 
-        protected override
+		protected override
 		IEnumerable<string> GetTextIDsOfComponentTypesThatCanBeEdited()
-        {
+		{
 			return [
-                "PixLogicUtils.Register",
+				"PixLogicUtils.Register",
 			];
-        }
-    }
+		}
+	}
 }

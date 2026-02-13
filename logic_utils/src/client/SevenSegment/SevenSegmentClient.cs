@@ -129,7 +129,7 @@ namespace PixLogicUtils.Client
 					segment = "G";
 					break;
 				default:
-              		Logger.Warn($"Unknown segment ID: {segment_id}");
+			  		Logger.Warn($"Unknown segment ID: {segment_id}");
 					break;
 			}
 

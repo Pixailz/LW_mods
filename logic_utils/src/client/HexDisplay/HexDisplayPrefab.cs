@@ -45,11 +45,6 @@ namespace PixLogicUtils.Client
 			Block baseBlock = new Block
 			{
 				RawColor = CHexDisplay.BlockColor,
-				// Scale = new Vector3(
-				// 	CHexDisplay.OriginalWidth,
-				// 	CHexDisplay.OriginalHeight,
-				// 	CHexDisplay.BlockDepth
-				// ),
 			};
 			return new Prefab
 			{

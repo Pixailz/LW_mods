@@ -8,11 +8,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="src/**/*.cs" />
+    <Compile Include="logic_utils/src/**/*.cs"/>
+    <Compile Include="mod_manager/src/**/*.cs"/>
   </ItemGroup>
 
   <ItemGroup>
     <Compile Include="/home/pix/.local/share/Steam/steamapps/common/Logic World/GameData/Ecconia_*/**/*.cs" />
+    <!-- <Compile Include="/home/pix/.local/share/Steam/steamapps/common/Logic World/GameData/Pix_logic_utils/src/shared/*.cs" /> -->
   </ItemGroup>
 
   <ItemGroup>

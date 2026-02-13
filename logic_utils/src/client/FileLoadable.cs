@@ -2,8 +2,8 @@
 
 namespace PixLogicUtils.Client
 {
-    public interface FileLoadable
-    {
-        void Load(byte[] filedata, LineWriter writer, bool force);
-    }
+	public interface FileLoadable
+	{
+		void Load(byte[] filedata, LineWriter writer, bool force);
+	}
 }

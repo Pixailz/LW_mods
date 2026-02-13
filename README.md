@@ -8,8 +8,5 @@ This is a collection of mods for Logic World, including:
 
 - add seven segment display through panel
 - add hex display through panel
-- add DoubleDabble decoder
-- make input of HexDisplay aligned with grid ..
 - Display Menu doesn't apply changes when selection configuration is changed
-- Big refactor on HexDisplay and Screen PixelBuffer to make them more efficient and less memory intensive
-- Big refactor on Position and Scaling, a lot of have duplicated calculations
+- add DoubleDabble, Pulser, Multiplexer, Demultiplexer documentations

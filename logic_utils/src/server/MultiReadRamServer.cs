@@ -2,10 +2,10 @@
 using System;
 using PixLogicUtils.Shared.CustomData;
 using PixLogicUtils.Shared.Config;
+using PixLogicUtils.Shared.Utils;
 
 using System.IO;
 using System.IO.Compression;
-using PixLogicUtils.Shared.Utils;
 
 namespace PixLogicUtils.Server
 {
@@ -19,15 +19,19 @@ namespace PixLogicUtils.Server
 		private t_pin[]			pinsRead;
 
 		private t_data[]		addresses;
+		private byte[]			memory = null;
+
+		private bool			isDataDirty;
+		private bool			loadFromSave = true;
 
 		private void debug_initialize()
 		{
 			Logger.Info("Initialised component");
 			Logger.Info($"Number of read output {this.Data.ReadNumber}");
-			Logger.Info($"Data Width            {this.Data.DataWidth}b");
-			Logger.Info($"Address Width         {this.Data.AddressWidth}b");
-			Logger.Info($"Address UpperWidth    {this.sizeInByte / 8}o");
-			Logger.Info($"Total Size            {this.totalSizeInByte}o");
+			Logger.Info($"Data Width			{this.Data.DataWidth}b");
+			Logger.Info($"Address Width		 {this.Data.AddressWidth}b");
+			Logger.Info($"Address UpperWidth	{this.sizeInByte / 8}o");
+			Logger.Info($"Total Size			{this.totalSizeInByte}o");
 		}
 
 		private void	updateAddresses()
@@ -80,6 +84,12 @@ namespace PixLogicUtils.Server
 			this.totalSizeInByte = Utils.GetMask(this.Data.AddressWidth) * this.sizeInByte;
 		}
 
+		protected void _initialize_memory()
+		{
+			this.memory = new byte[this.totalSizeInByte];
+
+		}
+
 		protected void _initialize(t_width DataWidth, t_width AddressWidth)
 		{
 			this.Data.DataWidth = DataWidth;
@@ -87,8 +97,7 @@ namespace PixLogicUtils.Server
 
 			this._initialize_pins_read();
 			this._initialize_size();
-
-			this.Data.Memory = new byte[this.totalSizeInByte];
+			this._initialize_memory();
 			this._initialize_address();
 
 			// this.debug_initialize();
@@ -105,6 +114,7 @@ namespace PixLogicUtils.Server
 			this._initialize_pins_read();
 			this._initialize_address();
 			this._initialize_size();
+			this._initialize_memory();
 		}
 
 		private void test()
@@ -213,10 +223,10 @@ namespace PixLogicUtils.Server
 
 			for (t_data i = 0; i < this.sizeInByte; i++)
 			{
-				this.Data.Memory[data_index + i] = Utils.BitSwap((byte)(data & 0xFF));
+				this.memory[data_index + i] = Utils.BitSwap((byte)(data & 0xFF));
 				data >>= 8;
 			}
-			this.Data.IsDataDirty = true;
+			this.isDataDirty = true;
 		}
 
 		private t_data	getData(t_data addr)
@@ -226,7 +236,7 @@ namespace PixLogicUtils.Server
 
 			for (t_data i = this.sizeInByte; i > 0; i--)
 			{
-				byte byte_data = this.Data.Memory[data_index + i - 1];
+				byte byte_data = this.memory[data_index + i - 1];
 
 				data = (data << 8) | Utils.BitSwap(byte_data);
 			}
@@ -237,22 +247,23 @@ namespace PixLogicUtils.Server
 		protected override void OnCustomDataUpdated()
 		{
 
-			if (this.Data.LoadFromSave && this.Data.Memory != null || this.Data.State == 1 && this.Data.ClientIncomingData != null)
+			if (this.loadFromSave && this.Data.Memory != null || this.Data.State == 1 && this.Data.ClientIncomingData != null)
 			{
 				var to_load_from = this.Data.Memory;
-				if (this.Data.LoadFromSave)
-				{
-					Logger.Info("Loading data from save");
-				}
-				else
+				if (this.Data.State == 1)
 				{
 					Logger.Info("Loading data from client");
 					to_load_from = Data.ClientIncomingData;
-					this.Data.IsDataDirty = true;
+				}
+				else
+				{
+					Logger.Info("Loading data from save");
 				}
 				MemoryStream stream = new MemoryStream(to_load_from);
 				stream.Position = 0;
-				byte[] mem1 = new byte[this.Data.Memory.Length];
+				if (this.memory == null)
+					_initialize_memory();
+				byte[] mem1 = new byte[this.memory.Length];
 				try
 				{
 					DeflateStream decompressor = new DeflateStream(stream, CompressionMode.Decompress);
@@ -261,41 +272,41 @@ namespace PixLogicUtils.Server
 					while((bytesRead = decompressor.Read(mem1, nextStartIndex, mem1.Length - nextStartIndex)) > 0){
 						nextStartIndex += bytesRead;
 					}
-					Buffer.BlockCopy(mem1, 0, this.Data.Memory, 0, mem1.Length);
-
+					Buffer.BlockCopy(mem1, 0, this.memory, 0, mem1.Length);
 				}
 				catch(Exception ex)
 				{
 					Logger.Error("[test_memory] Loading data from client failed with exception: " + ex);
 				}
-				this.Data.LoadFromSave = false;
+				this.loadFromSave = false;
 				if (this.Data.State == 1)
 				{
 					this.Data.State = 0;
 					this.Data.ClientIncomingData = [];
+					this.isDataDirty = true;
 				}
 				QueueLogicUpdate();
 			}
 		}
 
-        protected override void SavePersistentValuesToCustomData()
-        {
-            if (!this.Data.IsDataDirty) return;
-            this.Data.IsDataDirty = false;
+		protected override void SavePersistentValuesToCustomData()
+		{
+			if (!this.isDataDirty) return;
+			this.isDataDirty = false;
 
-            MemoryStream memstream = new MemoryStream();
-            memstream.Position = 0;
-            DeflateStream compressor = new DeflateStream(memstream, CompressionLevel.Optimal, true);
-            compressor.Write(this.Data.Memory, 0, this.Data.Memory.Length);
-            compressor.Flush();
-            int length = (int)memstream.Position;
-            memstream.Position = 0;
-            byte[] bytes = new byte[length];
-            memstream.Read(bytes, 0, length);
-            this.Data.Memory = bytes;
-        }
+			MemoryStream memstream = new MemoryStream();
+			memstream.Position = 0;
+			DeflateStream compressor = new DeflateStream(memstream, CompressionLevel.Optimal, true);
+			compressor.Write(this.memory, 0, this.memory.Length);
+			compressor.Flush();
+			int length = (int)memstream.Position;
+			memstream.Position = 0;
+			byte[] bytes = new byte[length];
+			memstream.Read(bytes, 0, length);
+			this.Data.Memory = bytes;
+		}
 
-        public override void Dispose()
+		public override void Dispose()
 		{
 		}
 	}

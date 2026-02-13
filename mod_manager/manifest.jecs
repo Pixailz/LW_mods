@@ -4,6 +4,7 @@ Author: Pixailz
 Version: 0.0.1
 Priority: -1
 ClientOnly: True
+Source: https://github.com/Pixailz/LW_mods
 Dependencies:
     - EccsGuiBuilder
     - EccsLogicWorldAPI
